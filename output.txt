@@ -1,0 +1,3741 @@
+.
+├── Calculator
+│   ├── Calculator.html
+│   ├── css
+│   │   └── calclayout.css
+│   ├── images
+│   │   └── Sprite.png
+│   └── js
+│       ├── jquery-1.8.0.min.js
+│       ├── jquery-ui.min.js
+│       └── oscZenoedited.js
+├── Exams
+│   └── 000_PYQ
+│       ├── Algorithms
+│       │   ├── Algorithms
+│       │   │   ├── S10_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S11_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S12_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S13_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S14_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S15_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S16_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S17_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S1_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S9_Algorithms
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Asymptotic_Notation
+│       │   │   ├── S1_Asymptotic_Notation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Asymptotic_Notation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Asymptotic_Notation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Divide_and_Conquer
+│       │   │   ├── S1_Divide_and_Conquer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Dynamic_Programming
+│       │   │   ├── S1_Dynamic_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Graph_Traversal
+│       │   │   ├── S1_Graph_Traversal
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Graph_Traversal
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Greedy_Technique
+│       │   │   ├── S1_Greedy_Technique
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Minimum_Spanning_Tree
+│       │   │   ├── S1_Minimum_Spanning_Tree
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Minimum_Spanning_Tree
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Minimum_Spanning_Tree
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Recurrence_Relation
+│       │   │   ├── S1_Recurrence_Relation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Recurrence_Relation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Shortest_Path
+│       │   │   ├── S1_Shortest_Path
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Shortest_Path
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   └── Sorting
+│       │       ├── S1_Sorting
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S2_Sorting
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S3_Sorting
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── data.json
+│       │       └── data_load.js
+│       ├── C_Programming
+│       │   ├── Arithmetic_Operation
+│       │   │   ├── S1_Arithmetic_Operation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Arithmetic_Operation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Array_and_Pointer
+│       │   │   ├── S1_Array_and_Pointer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Array_and_Pointer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Array_and_Pointer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Array_and_Pointer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── C_Programming
+│       │   │   ├── S10_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S11_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S12_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S13_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S14_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S15_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S16_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S1_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S9_C_Programming
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Conditional_Statement
+│       │   │   ├── S1_Conditional_Statement
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Function
+│       │   │   ├── S1_Function
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Function
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Function
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Function
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Function
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Function
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Function
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Function
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   └── Loops
+│       │       ├── S1_Loops
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── data.json
+│       │       └── data_load.js
+│       ├── Compiler_Design
+│       │   ├── Compiler_Design
+│       │   │   ├── S10_Compiler_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S11_Compiler_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S12_Compiler_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S13_Compiler_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S1_Compiler_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Compiler_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Compiler_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Compiler_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Compiler_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Compiler_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Compiler_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Compiler_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S9_Compiler_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Intermediate_Code_Generation
+│       │   │   ├── S1_Intermediate_Code_Generation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Intermediate_Code_Generation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Intermediate_Code_Generation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Lexical_Analysis
+│       │   │   ├── S1_Lexical_Analysis
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Matching
+│       │   │   ├── S1_Matching
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Parsing
+│       │   │   ├── S1_Parsing
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Parsing
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Parsing
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Parsing
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Parsing
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Parsing
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Runtime_Environment
+│       │   │   ├── S1_Runtime_Environment
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Runtime_Environment
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   └── Syntax-directed_Translation
+│       │       ├── S1_Syntax-directed_Translation
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── data.json
+│       │       └── data_load.js
+│       ├── Computer_Network
+│       │   ├── Application_Layer_Protocols
+│       │   │   ├── S1_Application_Layer_Protocols
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Application_Layer_Protocols
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Computer_Network
+│       │   │   ├── S10_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S11_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S12_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S13_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S14_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S15_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S16_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S17_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S18_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S19_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S1_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S20_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S21_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S22_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S23_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S24_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S25_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S9_Computer_Network
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Data_Link_Layer
+│       │   │   ├── S1_Data_Link_Layer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Data_Link_Layer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Data_Link_Layer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Data_Link_Layer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Data_Link_Layer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Data_Link_Layer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Data_Link_Layer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Network_Layer_Protocol
+│       │   │   ├── S1_Network_Layer_Protocol
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Network_Layer_Protocol
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Network_Layer_Protocol
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Network_Layer_Protocol
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Network_Layer_Protocol
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Network_Layer_Protocol
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Network_Layer_Protocol
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Network_Security
+│       │   │   ├── S1_Network_Security
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Network_Security
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Network_Security
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── OSI_Layer
+│       │   │   ├── S1_OSI_Layer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Physical_Layer
+│       │   │   ├── S1_Physical_Layer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Physical_Layer
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   └── Transport_Layer_Protocol
+│       │       ├── S1_Transport_Layer_Protocol
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S2_Transport_Layer_Protocol
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S3_Transport_Layer_Protocol
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S4_Transport_Layer_Protocol
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── data.json
+│       │       └── data_load.js
+│       ├── Computer_Organization
+│       │   ├── ALU_Data_Path_and_Control_Unit
+│       │   │   ├── S1_ALU_Data_Path_and_Control_Unit
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_ALU_Data_Path_and_Control_Unit
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Addressing_Modes
+│       │   │   ├── S1_Addressing_Modes
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Addressing_Modes
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Cache_Memory
+│       │   │   ├── S1_Cache_Memory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Cache_Memory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Cache_Memory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Cache_Memory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Cache_Memory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Computer_Organization
+│       │   │   ├── S10_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S11_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S12_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S13_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S14_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S15_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S16_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S17_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S18_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S19_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S1_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S20_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S21_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S22_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S23_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S24_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S9_Computer_Organization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── IO_Interface
+│       │   │   ├── S1_IO_Interface
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_IO_Interface
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Interrupt
+│       │   │   ├── S1_Interrupt
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Interrupt
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Machine_Instruction
+│       │   │   ├── S1_Machine_Instruction
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Machine_Instruction
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Machine_Instruction
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Machine_Instruction
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Memory_Chip_Design
+│       │   │   ├── S1_Memory_Chip_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Memory_Chip_Design
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Pipeline_Processor
+│       │   │   ├── S1_Pipeline_Processor
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Pipeline_Processor
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Pipeline_Processor
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Pipeline_Processor
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   └── Secondary_Storage
+│       │       ├── S1_Secondary_Storage
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S2_Secondary_Storage
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── data.json
+│       │       └── data_load.js
+│       ├── Data_Structure
+│       │   ├── AVL_Tree
+│       │   │   ├── S1_AVL_Tree
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Array
+│       │   │   ├── S1_Array
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Array
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── B+_Tree
+│       │   │   ├── S1_B+_Tree
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── B_Tree
+│       │   │   ├── S1_B_Tree
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Binary_Search_Tree
+│       │   │   ├── S1_Binary_Search_Tree
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Binary_Search_Tree
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Binary_Search_Tree
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Binary_Tree
+│       │   │   ├── S1_Binary_Tree
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Binary_Tree
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Binary_Tree
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Data_Structure
+│       │   │   ├── S10_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S11_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S12_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S13_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S14_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S15_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S16_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S17_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S18_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S19_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S1_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S9_Data_Structure
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Hashing
+│       │   │   ├── S1_Hashing
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Hashing
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Heap_Tree
+│       │   │   ├── S1_Heap_Tree
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Heap_Tree
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Link_List
+│       │   │   ├── S1_Link_List
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Link_List
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Queue
+│       │   │   ├── S1_Queue
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Stack
+│       │   │   ├── S1_Stack
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Stack
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   └── n-ary_Tree
+│       │       ├── S1_n-ary_Tree
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── data.json
+│       │       └── data_load.js
+│       ├── Database_Management_System
+│       │   ├── Database_Management_System
+│       │   │   ├── S10_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S11_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S12_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S13_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S14_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S15_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S16_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S17_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S18_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S19_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S1_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S9_Database_Management_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── ER_Model
+│       │   │   ├── S1_ER_Model
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── File_System
+│       │   │   ├── S1_File_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_File_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_File_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Integrity_Constraints
+│       │   │   ├── S1_Integrity_Constraints
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Normal_Form
+│       │   │   ├── S1_Normal_Form
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Normal_Form
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Normal_Form
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Relational_Algebra
+│       │   │   ├── S1_Relational_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Relational_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Relational_Schema
+│       │   │   ├── S1_Relational_Schema
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Relational_Schema
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── SQL
+│       │   │   ├── S1_SQL
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_SQL
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_SQL
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_SQL
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Transactions
+│       │   │   ├── S1_Transactions
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Transactions
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Transactions
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   └── Tuple_Calculus
+│       │       ├── S1_Tuple_Calculus
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── data.json
+│       │       └── data_load.js
+│       ├── Digital_Logic
+│       │   ├── Boolean_Algebra
+│       │   │   ├── S1_Boolean_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Boolean_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Boolean_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Boolean_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Boolean_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Boolean_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Boolean_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Boolean_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Combinational_Circuit
+│       │   │   ├── S1_Combinational_Circuit
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Combinational_Circuit
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Combinational_Circuit
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Combinational_Circuit
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Digital_Logic
+│       │   │   ├── S10_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S11_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S12_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S13_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S14_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S15_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S16_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S17_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S18_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S19_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S1_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S20_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S21_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S22_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S9_Digital_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Number_System
+│       │   │   ├── S1_Number_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Number_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Number_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Number_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Number_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Number_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Number_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   └── Sequential_Circuit
+│       │       ├── S1_Sequential_Circuit
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S2_Sequential_Circuit
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S3_Sequential_Circuit
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── data.json
+│       │       └── data_load.js
+│       ├── Discrete_Mathematics
+│       │   ├── Combination
+│       │   │   ├── S1_Combination
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Combination
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Discrete_Mathematics
+│       │   │   ├── S10_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S11_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S12_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S13_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S14_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S15_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S16_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S17_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S18_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S19_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S1_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S20_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S21_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S22_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S23_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S24_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S25_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S26_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S27_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S28_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S29_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S30_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S9_Discrete_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Functions
+│       │   │   ├── S1_Functions
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Functions
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Graph_Theory
+│       │   │   ├── S1_Graph_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Graph_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Graph_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Graph_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Graph_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Graph_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Graph_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Graph_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Group_Theory
+│       │   │   ├── S1_Group_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Group_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Lattice
+│       │   │   ├── S1_Lattice
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Planar_Graph
+│       │   │   ├── S1_Planar_Graph
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Probability_Theory
+│       │   │   ├── S1_Probability_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Probability_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Probability_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Probability_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Probability_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Probability_Theory
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Propositional_Logic
+│       │   │   ├── S1_Propositional_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Propositional_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Propositional_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Propositional_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Propositional_Logic
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Recurrence
+│       │   │   ├── S1_Recurrence
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Relation
+│       │   │   ├── S1_Relation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Relation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   └── Set_Theory
+│       │       ├── S1_Set_Theory
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S2_Set_Theory
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S3_Set_Theory
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S4_Set_Theory
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── data.json
+│       │       └── data_load.js
+│       ├── Engineering_Mathematics
+│       │   ├── Calculus
+│       │   │   ├── S1_Calculus
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Calculus
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Calculus
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Calculus
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Calculus
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Engineering_Mathematics
+│       │   │   ├── S10_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S11_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S12_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S13_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S14_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S15_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S1_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S9_Engineering_Mathematics
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Linear_Algebra
+│       │   │   ├── S1_Linear_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Linear_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Linear_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Linear_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Linear_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Linear_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Linear_Algebra
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   └── Numerical_Method
+│       │       ├── S1_Numerical_Method
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S2_Numerical_Method
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S3_Numerical_Method
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── data.json
+│       │       └── data_load.js
+│       ├── General_Aptitude-_CSE
+│       │   ├── General_Aptitude-_CSE
+│       │   │   ├── S10_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S11_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S12_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S13_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S14_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S15_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S16_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S17_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S1_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S9_General_Aptitude-_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Numerical_Ability_–_CSE
+│       │   │   ├── S10_Numerical_Ability_–_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S1_Numerical_Ability_–_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Numerical_Ability_–_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Numerical_Ability_–_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Numerical_Ability_–_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Numerical_Ability_–_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Numerical_Ability_–_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Numerical_Ability_–_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Numerical_Ability_–_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S9_Numerical_Ability_–_CSE
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   └── Verbal_Ability_–_CSE
+│       │       ├── S1_Verbal_Ability_–_CSE
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S2_Verbal_Ability_–_CSE
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S3_Verbal_Ability_–_CSE
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S4_Verbal_Ability_–_CSE
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S5_Verbal_Ability_–_CSE
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S6_Verbal_Ability_–_CSE
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S7_Verbal_Ability_–_CSE
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── data.json
+│       │       └── data_load.js
+│       ├── Only_For_ISRO_CSE
+│       │   ├── Software_Engg.
+│       │   │   ├── S1_Software_Engg.
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Software_Engg.
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Software_Engg.
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Software_Engg.
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Software_Engg.
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Software_Engg.
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Software_Engg.
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   └── Web_Technology
+│       │       ├── S1_Web_Technology
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── S2_Web_Technology
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── data.json
+│       │       └── data_load.js
+│       ├── Operating_System
+│       │   ├── CPU_Scheduling
+│       │   │   ├── S1_CPU_Scheduling
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_CPU_Scheduling
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_CPU_Scheduling
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_CPU_Scheduling
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_CPU_Scheduling
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Deadlock
+│       │   │   ├── S1_Deadlock
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Deadlock
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Deadlock
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Disk_Scheduling
+│       │   │   ├── S1_Disk_Scheduling
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── File_Systems
+│       │   │   ├── S1_File_Systems
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Memory_Management
+│       │   │   ├── S1_Memory_Management
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Memory_Management
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Memory_Management
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Memory_Management
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Memory_Management
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Memory_Management
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Memory_Management
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Memory_Management
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Operating_System
+│       │   │   ├── S10_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S11_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S12_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S13_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S14_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S15_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S16_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S17_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S18_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S19_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S1_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S20_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S21_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S22_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S23_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S24_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S25_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S9_Operating_System
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Process
+│       │   │   ├── S1_Process
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Process
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Process_Synchronization
+│       │   │   ├── S1_Process_Synchronization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Process_Synchronization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Process_Synchronization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Process_Synchronization
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── System_Call
+│       │   │   ├── S1_System_Call
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_System_Call
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   └── Thread
+│       │       ├── S1_Thread
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── data.json
+│       │       └── data_load.js
+│       ├── Theory_of_Computation
+│       │   ├── Context_Free_Grammar
+│       │   │   ├── S1_Context_Free_Grammar
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Context_Free_Grammar
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Context_Free_Grammar
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Context_Free_Language
+│       │   │   ├── S1_Context_Free_Language
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Context_Free_Language
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Context_Free_Language
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Finite_Automata
+│       │   │   ├── S1_Finite_Automata
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Finite_Automata
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Finite_Automata
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Finite_Automata
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Finite_Automata
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Push-down_Automata
+│       │   │   ├── S1_Push-down_Automata
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Recursive_Language
+│       │   │   ├── S1_Recursive_Language
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Regular_Expression
+│       │   │   ├── S1_Regular_Expression
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Regular_Expression
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Regular_Grammar
+│       │   │   ├── S1_Regular_Grammar
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Regular_Language
+│       │   │   ├── S1_Regular_Language
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Regular_Language
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Theory_of_Computation
+│       │   │   ├── S10_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S11_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S12_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S13_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S14_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S15_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S16_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S17_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S18_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S19_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S1_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S20_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S2_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S3_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S4_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S5_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S6_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S7_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S8_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── S9_Theory_of_Computation
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   ├── Turing_Machine
+│       │   │   ├── S1_Turing_Machine
+│       │   │   │   ├── data.json
+│       │   │   │   └── data_load.js
+│       │   │   ├── data.json
+│       │   │   └── data_load.js
+│       │   └── Undecidability
+│       │       ├── S1_Undecidability
+│       │       │   ├── data.json
+│       │       │   └── data_load.js
+│       │       ├── data.json
+│       │       └── data_load.js
+│       └── Year_Wise
+│           ├── GATE_2000
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2001
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2002
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2003
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2004
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2005
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2006
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2007
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2008
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2009
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2010
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2011
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2012
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2013
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2014_SET-1
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2014_SET-2
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2014_SET-3
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2015_SET-1
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2015_SET-2
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2015_SET-3
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2016_SET-1
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2016_SET-2
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2017_SET-1
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2017_SET-2
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2018
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2019
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2020
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2021_SET-1
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2021_SET-2
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2022
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2023
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2024_SET-1
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2024_SET-2
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2025_SET-1
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_2025_SET-2
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_IT_2004
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_IT_2005
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_IT_2006
+│           │   ├── data.json
+│           │   └── data_load.js
+│           ├── GATE_IT_2007
+│           │   ├── data.json
+│           │   └── data_load.js
+│           └── GATE_IT_2008
+│               ├── data.json
+│               └── data_load.js
+├── LICENSE
+├── README.md
+├── analytics.html
+├── bookmarks.html
+├── css
+│   ├── analytics_style.css
+│   ├── bookmarks_style.css
+│   ├── exam_library_style.css
+│   ├── exam_style.css
+│   ├── fonts
+│   │   └── OpenSans-Regular.ttf
+│   └── result_style.css
+├── exam_index.js
+├── exam_library.html
+├── generate_exam_index.js
+├── images
+│   ├── bombayTheGoal.png
+│   ├── gatePYQ
+│   │   ├── ALU_Data_Path_and_Control_Unit
+│   │   │   ├── q17_85b8e89d.webp
+│   │   │   ├── q30_7807d2ff.jpg
+│   │   │   ├── q38_b8097889.jpg
+│   │   │   ├── q41_0ce010b4.jpg
+│   │   │   ├── q67_759b6f1e.jpg
+│   │   │   └── q79_570ada15.jpg
+│   │   ├── AVL_Tree
+│   │   │   └── q1.14_1d946d1f.jpg
+│   │   ├── Addressing_Modes
+│   │   │   ├── q28_d9c8664a.jpg
+│   │   │   └── q34_3270de0d.jpg
+│   │   ├── Algorithms
+│   │   │   ├── q11_81240da5.jpg
+│   │   │   ├── q12_7de407b3.jpg
+│   │   │   ├── q13_494e6aeb.jpg
+│   │   │   ├── q16_a76213c5.jpg
+│   │   │   ├── q17_3427ef34.jpg
+│   │   │   ├── q19_8b840044.jpg
+│   │   │   ├── q21_0bd25948.jpg
+│   │   │   ├── q37_6178654c.jpg
+│   │   │   ├── q38_4d6aca33.jpg
+│   │   │   ├── q38_a55a5118.jpg
+│   │   │   ├── q38a_1c6d1507.jpg
+│   │   │   ├── q39_8d9d79a9.jpg
+│   │   │   ├── q3_33b11b5a.jpg
+│   │   │   ├── q40_17a15b5c.jpg
+│   │   │   ├── q41_1d66a9cf.jpg
+│   │   │   ├── q44_544299d1.jpg
+│   │   │   ├── q44_a86a1440.jpg
+│   │   │   ├── q45_821c052a.jpg
+│   │   │   ├── q45_f6cfd604.jpg
+│   │   │   ├── q47_241ae69c.jpg
+│   │   │   ├── q47_3d5ab5a5.jpg
+│   │   │   ├── q47_564dc013.jpg
+│   │   │   ├── q48_ac42f524.jpg
+│   │   │   ├── q49_7a80742a.webp
+│   │   │   ├── q49_ae33f918.webp
+│   │   │   ├── q4_e0e30ec7.jpg
+│   │   │   ├── q52_bdf780ad.jpg
+│   │   │   ├── q52_d03ffa26.jpg
+│   │   │   ├── q53_b563227e.jpg
+│   │   │   ├── q54_ee64d343.webp
+│   │   │   ├── q56_2af842fc.jpg
+│   │   │   ├── q5_a742cce6.jpg
+│   │   │   ├── q68_3abc224c.jpg
+│   │   │   ├── q7_689784b4.jpg
+│   │   │   └── q87_3ccdd455.jpg
+│   │   ├── Arithmetic_Operation
+│   │   │   ├── q34_c5d530be.jpg
+│   │   │   └── q45_b4da3cf0.jpg
+│   │   ├── Asymptotic_Notation
+│   │   │   ├── q16_a76213c5.jpg
+│   │   │   ├── q39_8d9d79a9.jpg
+│   │   │   └── q44_544299d1.jpg
+│   │   ├── B+_Tree
+│   │   │   ├── q11_d7479bce.webp
+│   │   │   ├── q22_adb7a2d5.jpg
+│   │   │   ├── q84a_d9f1f82d.jpg
+│   │   │   ├── q84b_037c52a6.jpg
+│   │   │   ├── q85a_a2b5c766.jpg
+│   │   │   └── q85b_b15f9ed2.jpg
+│   │   ├── B_Tree
+│   │   │   ├── q65_691d0854.jpg
+│   │   │   └── q65a_306f9651.jpg
+│   │   ├── Binary_Search_Tree
+│   │   │   ├── q19_f889341b.jpg
+│   │   │   └── q41_3fc8ff9b.jpg
+│   │   ├── Binary_Tree
+│   │   │   ├── q1.15_70f4e3da.jpg
+│   │   │   ├── q37_50aef616.jpg
+│   │   │   ├── q39_dedc3211.jpg
+│   │   │   ├── q50_0b35423d.jpg
+│   │   │   ├── q54_8a5ee516.jpg
+│   │   │   └── q80_ad0455a8.jpg
+│   │   ├── Boolean_Algebra
+│   │   │   ├── q1.8_4e7f60ef.jpg
+│   │   │   ├── q1.8_cc87bfe1.jpg
+│   │   │   ├── q10_1f8baeab.jpg
+│   │   │   ├── q10_be2001bc.jpg
+│   │   │   ├── q11_8c20f635.jpg
+│   │   │   ├── q12_63e58d40.jpg
+│   │   │   ├── q12_ecd1ed47.jpg
+│   │   │   ├── q15_4b90dfc8.jpg
+│   │   │   ├── q15_fcc4baa0.jpg
+│   │   │   ├── q16-aa_bdb90011.jpg
+│   │   │   ├── q16-ab_e8a19bd8.jpg
+│   │   │   ├── q1_e61b560a.jpg
+│   │   │   ├── q2.11_00e62539.jpg
+│   │   │   ├── q2.12_bf1b9247.jpg
+│   │   │   ├── q2.24_a4b66eff.jpg
+│   │   │   ├── q2.7_38c7ce3d.jpg
+│   │   │   ├── q24_d4377443.jpg
+│   │   │   ├── q26_d435cff8.jpg
+│   │   │   ├── q27_a307e416.jpg
+│   │   │   ├── q28_44ec0537.jpg
+│   │   │   ├── q28_487c809f.jpg
+│   │   │   ├── q2_5c33715e.jpg
+│   │   │   ├── q2_6dcd75de.jpg
+│   │   │   ├── q2_aea01d42.jpg
+│   │   │   ├── q30_537e8815.jpg
+│   │   │   ├── q30_614af789.jpg
+│   │   │   ├── q31_95d89936.jpg
+│   │   │   ├── q33_f20ca4cf.webp
+│   │   │   ├── q35_e2a87eab.jpg
+│   │   │   ├── q36_3b292458.jpg
+│   │   │   ├── q36_671104cb.jpg
+│   │   │   ├── q3_2cdef408.jpg
+│   │   │   ├── q45_99ce3d1d.jpg
+│   │   │   ├── q45_cb361b69.jpg
+│   │   │   ├── q47_ff3adc84.jpg
+│   │   │   ├── q5.5_1aa1e9e8.jpg
+│   │   │   ├── q53_ae983511.jpg
+│   │   │   ├── q5_98fd479f.jpg
+│   │   │   ├── q66_f241f6da.jpg
+│   │   │   ├── q6_b26b0b55.jpg
+│   │   │   ├── q78_f8e449ef.jpg
+│   │   │   ├── q8_8c7da917.jpg
+│   │   │   ├── q8_ae4ca5cf.jpg
+│   │   │   └── q9_7cd2ae9c.jpg
+│   │   ├── CPU_Scheduling
+│   │   │   ├── q10_01cb7317.jpg
+│   │   │   ├── q16_f9f2d561.jpg
+│   │   │   ├── q31_4db3f95a.jpg
+│   │   │   ├── q32_00c28216.jpg
+│   │   │   ├── q32_3726bcc5.jpg
+│   │   │   ├── q32_59e10a11.jpg
+│   │   │   ├── q41_98bc91e9.jpg
+│   │   │   ├── q43_6b11f541.jpg
+│   │   │   ├── q46_0eee0bd6.jpg
+│   │   │   ├── q46_43e646e6.jpg
+│   │   │   ├── q47_5095f5ac.jpg
+│   │   │   ├── q47_eabb2659.jpg
+│   │   │   ├── q50_bc55af2e.jpg
+│   │   │   └── q9_b12a8e72.jpg
+│   │   ├── C_Programming
+│   │   │   ├── q26_acb7b40e.jpg
+│   │   │   ├── q34_c5d530be.jpg
+│   │   │   ├── q3_42abd6c6.jpg
+│   │   │   ├── q45_b4da3cf0.jpg
+│   │   │   ├── q46_8e3cceff.jpg
+│   │   │   ├── q48_1495b619.jpg
+│   │   │   ├── q52_7b87d5d2.jpg
+│   │   │   ├── q53_ddb61680.jpg
+│   │   │   └── q90_dd92bc70.jpg
+│   │   ├── Cache_Memory
+│   │   │   ├── q43_7d1f00ff.webp
+│   │   │   ├── q45_877a44e0.jpg
+│   │   │   ├── q48_06dbca39.jpg
+│   │   │   └── q50_ff9c459d.jpg
+│   │   ├── Calculus
+│   │   │   └── q24_3e91ed26.jpg
+│   │   ├── Combination
+│   │   │   └── q34_5ebdef8e.jpg
+│   │   ├── Combinational_Circuit
+│   │   │   ├── q1-IV_325ec5d5.jpg
+│   │   │   ├── q10_9ef75cf4.jpg
+│   │   │   ├── q11_d9777822.jpg
+│   │   │   ├── q12_4469eeb2.jpg
+│   │   │   ├── q13_3e8c97a6.jpg
+│   │   │   ├── q15a_90d927be.jpg
+│   │   │   ├── q18_c69f200a.webp
+│   │   │   ├── q2.21_d96f0d46.jpg
+│   │   │   ├── q2.22_6eb0c2a6.jpg
+│   │   │   ├── q21_b743d471.webp
+│   │   │   ├── q26_7e078718.jpg
+│   │   │   ├── q27_4b0295b7.jpg
+│   │   │   ├── q30_c36da989.jpg
+│   │   │   ├── q34_57cf3cfb.jpg
+│   │   │   ├── q35_73871bb5.jpg
+│   │   │   ├── q36_302f0c23.jpg
+│   │   │   ├── q36_4a2799c2.jpg
+│   │   │   ├── q39_05a110d1.jpg
+│   │   │   ├── q40_e603cd6e.webp
+│   │   │   ├── q45_b1af9dd8.jpg
+│   │   │   ├── q46_4fb5071c.jpg
+│   │   │   ├── q47_c9d66e82.jpg
+│   │   │   ├── q47a_f5dff2b0.jpg
+│   │   │   ├── q48_572e5c83.jpg
+│   │   │   ├── q54_e1cd6ee8.webp
+│   │   │   ├── q5_9ea2ea67.jpg
+│   │   │   ├── q5_f3a25897.jpg
+│   │   │   ├── q77_a8d99d4d.jpg
+│   │   │   ├── q8_8800407c.jpg
+│   │   │   ├── q9_43e48617.jpg
+│   │   │   └── q9_a0a5ecab.jpg
+│   │   ├── Compiler_Design
+│   │   │   ├── q17_042f5f0c.jpg
+│   │   │   ├── q17_4dc50d68.jpg
+│   │   │   ├── q17_dff5c21d.jpg
+│   │   │   ├── q19_26e5b72c.jpg
+│   │   │   ├── q19_b9df82b8.jpg
+│   │   │   ├── q2.16_85b2e6fd.jpg
+│   │   │   ├── q27_d6e3a8a0.jpg
+│   │   │   ├── q36_5e8cdf73.jpg
+│   │   │   ├── q36_b81fa569.jpg
+│   │   │   ├── q36_e237e299.jpg
+│   │   │   ├── q36a_b9042f97.jpg
+│   │   │   ├── q37_199e567a.jpg
+│   │   │   ├── q38_52f1a2a9.jpg
+│   │   │   ├── q45_57f67ac9.jpg
+│   │   │   ├── q46_7b18643f.jpg
+│   │   │   ├── q47_a8b512f3.jpg
+│   │   │   ├── q51_b2e86863.jpg
+│   │   │   ├── q52_d25c144f.jpg
+│   │   │   ├── q54a_496f1284.jpg
+│   │   │   ├── q54b_a712a573.jpg
+│   │   │   ├── q84_2026e286.jpg
+│   │   │   └── q84_bef15a5a.jpg
+│   │   ├── Computer_Network
+│   │   │   ├── q12_fbd5cfe3.jpg
+│   │   │   ├── q13_4a5b162b.jpg
+│   │   │   ├── q14_d877ec30.jpg
+│   │   │   ├── q25_4b42d41a.jpg
+│   │   │   ├── q26_07b51d41.jpg
+│   │   │   ├── q26_96507893.jpg
+│   │   │   ├── q26_e2bbe577.jpg
+│   │   │   ├── q26a_e40289ea.jpg
+│   │   │   ├── q29_b9ace977.jpg
+│   │   │   ├── q45_3824beb8.jpg
+│   │   │   ├── q47_7e9a46a2.jpg
+│   │   │   ├── q47_cddf7a5f.webp
+│   │   │   ├── q54_50b0764c.jpg
+│   │   │   ├── q54_6942b936.jpg
+│   │   │   ├── q55_6714c69d.jpg
+│   │   │   ├── q56_23530050.jpg
+│   │   │   ├── q60_1d5695fa.jpg
+│   │   │   ├── q61_15bb219e.jpg
+│   │   │   ├── q69_d0b045bf.jpg
+│   │   │   ├── q82_4a10130c.jpg
+│   │   │   ├── q83_f09ad486.jpg
+│   │   │   └── q85a_667c0628.jpg
+│   │   ├── Computer_Organization
+│   │   │   ├── q17_85b8e89d.webp
+│   │   │   ├── q28_52a82c1b.jpg
+│   │   │   ├── q28_d9c8664a.jpg
+│   │   │   ├── q2_f0302f91.jpg
+│   │   │   ├── q30_7807d2ff.jpg
+│   │   │   ├── q30_eec15aeb.jpg
+│   │   │   ├── q31_991991da.jpg
+│   │   │   ├── q32_9bb50bc2.jpg
+│   │   │   ├── q33_b6d0f7e6.jpg
+│   │   │   ├── q34_3270de0d.jpg
+│   │   │   ├── q38_2b8ca31a.jpg
+│   │   │   ├── q38_b8097889.jpg
+│   │   │   ├── q41_0ce010b4.jpg
+│   │   │   ├── q43_7d1f00ff.webp
+│   │   │   ├── q45_877a44e0.jpg
+│   │   │   ├── q48_06dbca39.jpg
+│   │   │   ├── q48_464367e7.jpg
+│   │   │   ├── q4_f58f93bb.jpg
+│   │   │   ├── q50_ff9c459d.jpg
+│   │   │   ├── q51_81cf05b3.webp
+│   │   │   ├── q55_f6311440.jpg
+│   │   │   ├── q6.1_1f0bee2f.jpg
+│   │   │   ├── q63_df1a4f4b.jpg
+│   │   │   ├── q67_759b6f1e.jpg
+│   │   │   ├── q71_d5243e81.jpg
+│   │   │   └── q79_570ada15.jpg
+│   │   ├── Context_Free_Grammar
+│   │   │   ├── q31a_d2bcc2a7.jpg
+│   │   │   └── q31b_a479fb0a.jpg
+│   │   ├── Data_Link_Layer
+│   │   │   ├── q26_e2bbe577.jpg
+│   │   │   ├── q29_b9ace977.jpg
+│   │   │   ├── q56_23530050.jpg
+│   │   │   ├── q82_4a10130c.jpg
+│   │   │   └── q83_f09ad486.jpg
+│   │   ├── Data_Structure
+│   │   │   ├── q1.14_1d946d1f.jpg
+│   │   │   ├── q1.15_70f4e3da.jpg
+│   │   │   ├── q11_d7479bce.webp
+│   │   │   ├── q11_df3f1168.jpg
+│   │   │   ├── q12_da47bc58.jpg
+│   │   │   ├── q14_8c271a02.jpg
+│   │   │   ├── q19_f889341b.jpg
+│   │   │   ├── q22_adb7a2d5.jpg
+│   │   │   ├── q27_b7722a29.jpg
+│   │   │   ├── q36_67f03162.jpg
+│   │   │   ├── q36_a0accceb.jpg
+│   │   │   ├── q37_50aef616.jpg
+│   │   │   ├── q37_769a47b7.jpg
+│   │   │   ├── q39_dedc3211.jpg
+│   │   │   ├── q3_34b9ffa9.jpg
+│   │   │   ├── q41_3fc8ff9b.jpg
+│   │   │   ├── q41_f1da2e75.jpg
+│   │   │   ├── q47_ec8a2570.jpg
+│   │   │   ├── q49_5ae2437e.jpg
+│   │   │   ├── q50_0b35423d.jpg
+│   │   │   ├── q52_05348840.jpg
+│   │   │   ├── q52_6208e194.jpg
+│   │   │   ├── q52_f6797a26.webp
+│   │   │   ├── q54_8a5ee516.jpg
+│   │   │   ├── q5a_ceb02b72.jpg
+│   │   │   ├── q5b_221e4ca2.jpg
+│   │   │   ├── q63_6b78c2e6.jpg
+│   │   │   ├── q65_691d0854.jpg
+│   │   │   ├── q65a_306f9651.jpg
+│   │   │   ├── q80_ad0455a8.jpg
+│   │   │   ├── q84a_d9f1f82d.jpg
+│   │   │   ├── q84b_037c52a6.jpg
+│   │   │   ├── q85a_a2b5c766.jpg
+│   │   │   └── q85b_b15f9ed2.jpg
+│   │   ├── Database_Management_System
+│   │   │   ├── q10_4a9e0516.webp
+│   │   │   ├── q11_05594a74.jpg
+│   │   │   ├── q12_98ab1de3.jpg
+│   │   │   ├── q13_00d62b79.jpg
+│   │   │   ├── q15_d25b3ef5.jpg
+│   │   │   ├── q16_77f487d5.jpg
+│   │   │   ├── q19_f503c6ab.jpg
+│   │   │   ├── q20_fff46230.jpg
+│   │   │   ├── q21_7385a135.jpg
+│   │   │   ├── q22_4febd6f8.jpg
+│   │   │   ├── q23_1293001f.jpg
+│   │   │   ├── q29_87119e6e.jpg
+│   │   │   ├── q30_1c9e79a8.jpg
+│   │   │   ├── q30_9bb6a32e.jpg
+│   │   │   ├── q35_e9b3f125.jpg
+│   │   │   ├── q35_fb6f6bf4.jpg
+│   │   │   ├── q36_8949872d.jpg
+│   │   │   ├── q37_7982b097.jpg
+│   │   │   ├── q37a_8f7271d7.jpg
+│   │   │   ├── q41_17720076.jpg
+│   │   │   ├── q42_13ce7592.jpg
+│   │   │   ├── q42_afa2fbc5.jpg
+│   │   │   ├── q42_ec75b74c.jpg
+│   │   │   ├── q45_06d1065f.webp
+│   │   │   ├── q46_acaeb162.jpg
+│   │   │   ├── q49_d1539589.jpg
+│   │   │   ├── q49_e09ff2a7.jpg
+│   │   │   ├── q49a_79634f62.jpg
+│   │   │   ├── q50_b1b0feea.jpg
+│   │   │   ├── q50_e0841df0.jpg
+│   │   │   ├── q51_2717e41f.jpg
+│   │   │   ├── q51_5155e252.jpg
+│   │   │   ├── q51_c175b8ed.jpg
+│   │   │   ├── q51a_e0f73a11.jpg
+│   │   │   ├── q52_3b8c0d21.jpg
+│   │   │   ├── q52_44be1c2f.jpg
+│   │   │   ├── q52a_85159664.jpg
+│   │   │   ├── q53_8cbe5db4.jpg
+│   │   │   ├── q55_cdc2944f.jpg
+│   │   │   ├── q55a_38366a3a.jpg
+│   │   │   ├── q59_39d5133d.jpg
+│   │   │   ├── q60_8949e2c3.jpg
+│   │   │   ├── q63_241939ef.jpg
+│   │   │   ├── q66_94480cd3.jpg
+│   │   │   ├── q67_9153671d.jpg
+│   │   │   ├── q69_12cbe10b.jpg
+│   │   │   ├── q73_7b7dd9cd.jpg
+│   │   │   ├── q76_054b99cf.jpg
+│   │   │   ├── q82_a2c9ca9e.jpg
+│   │   │   └── q87_3fcdb821.jpg
+│   │   ├── Deadlock
+│   │   │   ├── q27_9ea2c7ce.jpg
+│   │   │   ├── q30_5bca0566.jpg
+│   │   │   ├── q31_dc5dbfd2.jpg
+│   │   │   ├── q39_f1f4e800.jpg
+│   │   │   ├── q57_d0cca1a4.jpg
+│   │   │   └── q71_66b23f1e.jpg
+│   │   ├── Digital_Logic
+│   │   │   ├── q1-IIIa_c5e723c0.jpg
+│   │   │   ├── q1-IIIb_b72e4b1f.jpg
+│   │   │   ├── q1-IV_325ec5d5.jpg
+│   │   │   ├── q1.8_4e7f60ef.jpg
+│   │   │   ├── q1.8_cc87bfe1.jpg
+│   │   │   ├── q10_1f8baeab.jpg
+│   │   │   ├── q10_9ef75cf4.jpg
+│   │   │   ├── q10_be2001bc.jpg
+│   │   │   ├── q11_8c20f635.jpg
+│   │   │   ├── q11_d9777822.jpg
+│   │   │   ├── q12_4469eeb2.jpg
+│   │   │   ├── q12_63e58d40.jpg
+│   │   │   ├── q12_9957c677.jpg
+│   │   │   ├── q12_ecd1ed47.jpg
+│   │   │   ├── q13-a_8cd52ef1.jpg
+│   │   │   ├── q13_3e8c97a6.jpg
+│   │   │   ├── q15_4b90dfc8.jpg
+│   │   │   ├── q15_fcc4baa0.jpg
+│   │   │   ├── q15a_90d927be.jpg
+│   │   │   ├── q16-aa_bdb90011.jpg
+│   │   │   ├── q16-ab_e8a19bd8.jpg
+│   │   │   ├── q18_c69f200a.webp
+│   │   │   ├── q1_e61b560a.jpg
+│   │   │   ├── q2.11_00e62539.jpg
+│   │   │   ├── q2.12_bf1b9247.jpg
+│   │   │   ├── q2.12_fdfc937b.jpg
+│   │   │   ├── q2.21_d96f0d46.jpg
+│   │   │   ├── q2.22_6eb0c2a6.jpg
+│   │   │   ├── q2.24_a4b66eff.jpg
+│   │   │   ├── q2.7_38c7ce3d.jpg
+│   │   │   ├── q21_8a077758.jpg
+│   │   │   ├── q21_b743d471.webp
+│   │   │   ├── q22_8ce44ae4.jpg
+│   │   │   ├── q24_d4377443.jpg
+│   │   │   ├── q26_653272d6.jpg
+│   │   │   ├── q26_7e078718.jpg
+│   │   │   ├── q26_d435cff8.jpg
+│   │   │   ├── q27_4b0295b7.jpg
+│   │   │   ├── q27_a307e416.jpg
+│   │   │   ├── q28_23a3fb9c.jpg
+│   │   │   ├── q28_44ec0537.jpg
+│   │   │   ├── q28_487c809f.jpg
+│   │   │   ├── q2_5c33715e.jpg
+│   │   │   ├── q2_6dcd75de.jpg
+│   │   │   ├── q2_aea01d42.jpg
+│   │   │   ├── q30_537e8815.jpg
+│   │   │   ├── q30_614af789.jpg
+│   │   │   ├── q30_c36da989.jpg
+│   │   │   ├── q31_95d89936.jpg
+│   │   │   ├── q32_3fa4a72d.jpg
+│   │   │   ├── q33_393353a9.jpg
+│   │   │   ├── q33_5641701d.jpg
+│   │   │   ├── q33_f20ca4cf.webp
+│   │   │   ├── q33a_85f13d9e.jpg
+│   │   │   ├── q34_57cf3cfb.jpg
+│   │   │   ├── q35_73871bb5.jpg
+│   │   │   ├── q35_e2a87eab.jpg
+│   │   │   ├── q36_302f0c23.jpg
+│   │   │   ├── q36_3b292458.jpg
+│   │   │   ├── q36_4a2799c2.jpg
+│   │   │   ├── q36_671104cb.jpg
+│   │   │   ├── q37_0fb4170a.jpg
+│   │   │   ├── q37_1826100b.jpg
+│   │   │   ├── q37_e0f7fd7d.jpg
+│   │   │   ├── q38_3260c26a.jpg
+│   │   │   ├── q39_05a110d1.jpg
+│   │   │   ├── q3_2cdef408.jpg
+│   │   │   ├── q40_8aa2b208.jpg
+│   │   │   ├── q40_e603cd6e.webp
+│   │   │   ├── q43_9beb8fc9.jpg
+│   │   │   ├── q43_dbca8292.jpg
+│   │   │   ├── q45_2b4140de.jpg
+│   │   │   ├── q45_99ce3d1d.jpg
+│   │   │   ├── q45_b1af9dd8.jpg
+│   │   │   ├── q45_cb361b69.jpg
+│   │   │   ├── q46_4fb5071c.jpg
+│   │   │   ├── q47_c9d66e82.jpg
+│   │   │   ├── q47_ff3adc84.jpg
+│   │   │   ├── q47a_f5dff2b0.jpg
+│   │   │   ├── q48_572e5c83.jpg
+│   │   │   ├── q4_f68c322e.webp
+│   │   │   ├── q4a_b11456d2.webp
+│   │   │   ├── q5.5_1aa1e9e8.jpg
+│   │   │   ├── q50_6d9fa3b1.webp
+│   │   │   ├── q50_9b1eb674.jpg
+│   │   │   ├── q53_ae983511.jpg
+│   │   │   ├── q54_e1cd6ee8.webp
+│   │   │   ├── q5_98fd479f.jpg
+│   │   │   ├── q5_9ea2ea67.jpg
+│   │   │   ├── q5_f3a25897.jpg
+│   │   │   ├── q61_a3e4c9c5.jpg
+│   │   │   ├── q62a_17c9e04f.jpg
+│   │   │   ├── q62b_0f53b511.jpg
+│   │   │   ├── q64_7a27fad2.jpg
+│   │   │   ├── q64a_40774770.jpg
+│   │   │   ├── q66_f241f6da.jpg
+│   │   │   ├── q6_b26b0b55.jpg
+│   │   │   ├── q77_a8d99d4d.jpg
+│   │   │   ├── q78_f8e449ef.jpg
+│   │   │   ├── q89_e3556510.jpg
+│   │   │   ├── q8_8800407c.jpg
+│   │   │   ├── q8_8c7da917.jpg
+│   │   │   ├── q8_ab7840a0.jpg
+│   │   │   ├── q8_ae4ca5cf.jpg
+│   │   │   ├── q8b_f9d0bfca.jpg
+│   │   │   ├── q9_43e48617.jpg
+│   │   │   ├── q9_7cd2ae9c.jpg
+│   │   │   └── q9_a0a5ecab.jpg
+│   │   ├── Discrete_Mathematics
+│   │   │   ├── a40_5106ff0c.jpg
+│   │   │   ├── q1.15_7ee16da4.jpg
+│   │   │   ├── q11_81240da5.jpg
+│   │   │   ├── q13_494e6aeb.jpg
+│   │   │   ├── q13_d927c255.jpg
+│   │   │   ├── q18_14abf0c5.jpg
+│   │   │   ├── q19_8b840044.jpg
+│   │   │   ├── q1_8fc65f77.jpg
+│   │   │   ├── q20_e09e5d82.jpg
+│   │   │   ├── q21_0bd25948.jpg
+│   │   │   ├── q22_d0235942.jpg
+│   │   │   ├── q26_2fa9f4d8.jpg
+│   │   │   ├── q26a_1e74edb6.jpg
+│   │   │   ├── q26a_9c102615.jpg
+│   │   │   ├── q26b_a8cedcd5.jpg
+│   │   │   ├── q28a_08279c24.jpg
+│   │   │   ├── q28b_c4039267.jpg
+│   │   │   ├── q28c_758411ea.jpg
+│   │   │   ├── q28d_7c96af31.jpg
+│   │   │   ├── q30_38aeed9e.jpg
+│   │   │   ├── q32_3d05448c.jpg
+│   │   │   ├── q32_4f2be226.jpg
+│   │   │   ├── q34_5ebdef8e.jpg
+│   │   │   ├── q3_d99e6a64.jpg
+│   │   │   ├── q40_76105ee1.jpg
+│   │   │   ├── q44_ddb859d5.jpg
+│   │   │   ├── q46_8d8f4d68.jpg
+│   │   │   ├── q46_ea67eee2.jpg
+│   │   │   ├── q47_3d5ab5a5.jpg
+│   │   │   ├── q47_d0c7ddfc.jpg
+│   │   │   ├── q50_6bd60b4f.webp
+│   │   │   ├── q54_a8c051f9.jpg
+│   │   │   ├── q55_d153f985.jpg
+│   │   │   ├── q56_52f2f910.jpg
+│   │   │   ├── q5_370efc5f.jpg
+│   │   │   ├── q5_a742cce6.jpg
+│   │   │   ├── q71_1baeed35.jpg
+│   │   │   ├── q72_0a54c40c.jpg
+│   │   │   ├── q77_b1b417fc.jpg
+│   │   │   ├── q78_b62ea598.jpg
+│   │   │   ├── q7_689784b4.jpg
+│   │   │   └── q9_8745816a.jpg
+│   │   ├── Divide_and_Conquer
+│   │   │   ├── q37_6178654c.jpg
+│   │   │   └── q3_33b11b5a.jpg
+│   │   ├── Dynamic_Programming
+│   │   │   ├── q12_7de407b3.jpg
+│   │   │   └── q38_a55a5118.jpg
+│   │   ├── ER_Model
+│   │   │   ├── q10_4a9e0516.webp
+│   │   │   ├── q16_77f487d5.jpg
+│   │   │   ├── q21_7385a135.jpg
+│   │   │   └── q82_a2c9ca9e.jpg
+│   │   ├── Engineering_Mathematics
+│   │   │   ├── q20_146e1864.jpg
+│   │   │   ├── q23_ec5c245a.jpg
+│   │   │   ├── q24_3e91ed26.jpg
+│   │   │   ├── q26_5ff1a22d.jpg
+│   │   │   ├── q39_c74abb15.jpg
+│   │   │   ├── q41_af915979.jpg
+│   │   │   └── q42_3e1e8375.jpg
+│   │   ├── File_System
+│   │   │   ├── q52_44be1c2f.jpg
+│   │   │   └── q69_12cbe10b.jpg
+│   │   ├── Finite_Automata
+│   │   │   ├── q12_32353a34.jpg
+│   │   │   ├── q16_6458e73d.jpg
+│   │   │   ├── q17_652cadc0.jpg
+│   │   │   ├── q26_91f4cce6.jpg
+│   │   │   ├── q27_3a17281d.jpg
+│   │   │   ├── q2_1323799a.jpg
+│   │   │   ├── q30_efb2d498.jpg
+│   │   │   ├── q32_07b3cb36.jpg
+│   │   │   ├── q33_77a7d1ad.jpg
+│   │   │   ├── q33_84a6e545.jpg
+│   │   │   ├── q34_72f0673b.jpg
+│   │   │   ├── q34a_dea49aa5.jpg
+│   │   │   ├── q36_9f601624.jpg
+│   │   │   ├── q36_eb254c40.jpg
+│   │   │   ├── q37_2cc385ad.jpg
+│   │   │   ├── q37_9146a2c1.jpg
+│   │   │   ├── q38_cacc54fd.jpg
+│   │   │   ├── q39_1ab3952a.jpg
+│   │   │   ├── q3_da00c87d.jpg
+│   │   │   ├── q40_3b7ca53e.webp
+│   │   │   ├── q40_978712f8.webp
+│   │   │   ├── q41_9ac32b02.jpg
+│   │   │   ├── q46_bca893f8.jpg
+│   │   │   ├── q46a_ce7a32ca.jpg
+│   │   │   ├── q47_b4851ece.jpg
+│   │   │   ├── q49a_47d407d6.jpg
+│   │   │   ├── q49b_02ea6677.jpg
+│   │   │   ├── q50_5ee91b7a.jpg
+│   │   │   ├── q50_fa81a7bc.jpg
+│   │   │   ├── q50a_f7605ab2.jpg
+│   │   │   ├── q50b_a17fcd95.jpg
+│   │   │   ├── q52_22ba3777.jpg
+│   │   │   ├── q52_abcd3d90.jpg
+│   │   │   ├── q53_b2cf6cf5.jpg
+│   │   │   ├── q54_ebe8ef02.jpg
+│   │   │   ├── q55_99884634.jpg
+│   │   │   ├── q63_5d9c1d2c.jpg
+│   │   │   ├── q73_a73a9f88.jpg
+│   │   │   ├── q74_2189d193.jpg
+│   │   │   ├── q79_655f330d.jpg
+│   │   │   └── q86_69a22ade.jpg
+│   │   ├── Function
+│   │   │   ├── q26_acb7b40e.jpg
+│   │   │   ├── q46_8e3cceff.jpg
+│   │   │   ├── q48_1495b619.jpg
+│   │   │   ├── q52_7b87d5d2.jpg
+│   │   │   └── q53_ddb61680.jpg
+│   │   ├── GATE_2000
+│   │   │   ├── q2.11_00e62539.jpg
+│   │   │   └── q2.12_fdfc937b.jpg
+│   │   ├── GATE_2001
+│   │   │   ├── q11_8c20f635.jpg
+│   │   │   ├── q33_393353a9.jpg
+│   │   │   ├── q33a_85f13d9e.jpg
+│   │   │   ├── q34_3270de0d.jpg
+│   │   │   ├── q36_4a2799c2.jpg
+│   │   │   ├── q37_e0f7fd7d.jpg
+│   │   │   ├── q38_b8097889.jpg
+│   │   │   └── q49_d1539589.jpg
+│   │   ├── GATE_2002
+│   │   │   ├── q12_63e58d40.jpg
+│   │   │   ├── q26_d435cff8.jpg
+│   │   │   ├── q27_4b0295b7.jpg
+│   │   │   ├── q30_efb2d498.jpg
+│   │   │   └── q50_e0841df0.jpg
+│   │   ├── GATE_2003
+│   │   │   ├── q21_0bd25948.jpg
+│   │   │   ├── q30_9bb6a32e.jpg
+│   │   │   ├── q32_3d05448c.jpg
+│   │   │   ├── q34_5ebdef8e.jpg
+│   │   │   ├── q38_3260c26a.jpg
+│   │   │   ├── q42_3e1e8375.jpg
+│   │   │   ├── q43_dbca8292.jpg
+│   │   │   ├── q45_99ce3d1d.jpg
+│   │   │   ├── q46_4fb5071c.jpg
+│   │   │   ├── q47_c9d66e82.jpg
+│   │   │   ├── q47a_f5dff2b0.jpg
+│   │   │   ├── q48_464367e7.jpg
+│   │   │   ├── q50_fa81a7bc.jpg
+│   │   │   ├── q53_abd93de7.jpg
+│   │   │   ├── q55_99884634.jpg
+│   │   │   ├── q65_691d0854.jpg
+│   │   │   ├── q65a_306f9651.jpg
+│   │   │   ├── q68_3abc224c.jpg
+│   │   │   ├── q71_1baeed35.jpg
+│   │   │   └── q87_3fcdb821.jpg
+│   │   ├── GATE_2004
+│   │   │   ├── q34_8a5008c5.jpg
+│   │   │   ├── q36_67f03162.jpg
+│   │   │   ├── q37_769a47b7.jpg
+│   │   │   ├── q44_a86a1440.jpg
+│   │   │   ├── q45_57f67ac9.jpg
+│   │   │   ├── q46_0eee0bd6.jpg
+│   │   │   ├── q51_5155e252.jpg
+│   │   │   ├── q55_6714c69d.jpg
+│   │   │   ├── q56_23530050.jpg
+│   │   │   ├── q61_a3e4c9c5.jpg
+│   │   │   ├── q63_df1a4f4b.jpg
+│   │   │   ├── q67_759b6f1e.jpg
+│   │   │   ├── q72_0a54c40c.jpg
+│   │   │   ├── q77_b1b417fc.jpg
+│   │   │   ├── q86_69a22ade.jpg
+│   │   │   ├── q88_01955160.jpg
+│   │   │   └── q90_dd92bc70.jpg
+│   │   ├── GATE_2005
+│   │   │   ├── q15_fcc4baa0.jpg
+│   │   │   ├── q47_d0c7ddfc.jpg
+│   │   │   ├── q53_b2cf6cf5.jpg
+│   │   │   ├── q62a_17c9e04f.jpg
+│   │   │   ├── q62b_0f53b511.jpg
+│   │   │   ├── q63_5d9c1d2c.jpg
+│   │   │   ├── q64_7a27fad2.jpg
+│   │   │   ├── q64a_40774770.jpg
+│   │   │   ├── q71_66b23f1e.jpg
+│   │   │   ├── q76_054b99cf.jpg
+│   │   │   ├── q79_570ada15.jpg
+│   │   │   ├── q84_bef15a5a.jpg
+│   │   │   ├── q87_3ccdd455.jpg
+│   │   │   ├── q89_e3556510.jpg
+│   │   │   └── q9_8745816a.jpg
+│   │   ├── GATE_2006
+│   │   │   ├── q28_44ec0537.jpg
+│   │   │   ├── q35_e2a87eab.jpg
+│   │   │   ├── q36_671104cb.jpg
+│   │   │   ├── q37_0fb4170a.jpg
+│   │   │   ├── q39_05a110d1.jpg
+│   │   │   ├── q47_564dc013.jpg
+│   │   │   ├── q55_f6311440.jpg
+│   │   │   ├── q67_9153671d.jpg
+│   │   │   ├── q69_12cbe10b.jpg
+│   │   │   ├── q82_4a10130c.jpg
+│   │   │   ├── q83_f09ad486.jpg
+│   │   │   ├── q84_2026e286.jpg
+│   │   │   ├── q8_ab7840a0.jpg
+│   │   │   └── q8b_f9d0bfca.jpg
+│   │   ├── GATE_2007
+│   │   │   ├── q16_f9f2d561.jpg
+│   │   │   ├── q26a_1e74edb6.jpg
+│   │   │   ├── q26b_a8cedcd5.jpg
+│   │   │   ├── q36_302f0c23.jpg
+│   │   │   ├── q54a_496f1284.jpg
+│   │   │   ├── q54b_a712a573.jpg
+│   │   │   ├── q57_d0cca1a4.jpg
+│   │   │   ├── q58_1fce4bcb.jpg
+│   │   │   ├── q59_39d5133d.jpg
+│   │   │   ├── q5_a742cce6.jpg
+│   │   │   ├── q60_8949e2c3.jpg
+│   │   │   ├── q71_d5243e81.jpg
+│   │   │   └── q74_2189d193.jpg
+│   │   ├── GATE_2008
+│   │   │   ├── q19_8b840044.jpg
+│   │   │   ├── q24_3e91ed26.jpg
+│   │   │   ├── q45_821c052a.jpg
+│   │   │   ├── q49a_47d407d6.jpg
+│   │   │   ├── q49b_02ea6677.jpg
+│   │   │   ├── q51_b2e86863.jpg
+│   │   │   ├── q52_abcd3d90.jpg
+│   │   │   ├── q5_98fd479f.jpg
+│   │   │   ├── q82_a2c9ca9e.jpg
+│   │   │   └── q8_8c7da917.jpg
+│   │   ├── GATE_2009
+│   │   │   ├── q17_042f5f0c.jpg
+│   │   │   ├── q22_d0235942.jpg
+│   │   │   ├── q24_d4377443.jpg
+│   │   │   ├── q27_3a17281d.jpg
+│   │   │   ├── q28_52a82c1b.jpg
+│   │   │   ├── q30_5bca0566.jpg
+│   │   │   ├── q32_667f85ac.jpg
+│   │   │   ├── q36_a0accceb.jpg
+│   │   │   ├── q38_4d6aca33.jpg
+│   │   │   └── q41_9ac32b02.jpg
+│   │   ├── GATE_2010
+│   │   │   ├── q19_f503c6ab.jpg
+│   │   │   ├── q21_faca9423.jpg
+│   │   │   ├── q22_be53474f.jpg
+│   │   │   ├── q23_0dd65df2.jpg
+│   │   │   ├── q31_95d89936.jpg
+│   │   │   ├── q32_3fa4a72d.jpg
+│   │   │   ├── q33_b6d0f7e6.jpg
+│   │   │   ├── q42_ec75b74c.jpg
+│   │   │   ├── q45_03507a62.jpg
+│   │   │   ├── q48_06dbca39.jpg
+│   │   │   ├── q52_6208e194.jpg
+│   │   │   ├── q54_50b0764c.jpg
+│   │   │   └── q9_a0a5ecab.jpg
+│   │   ├── GATE_2011
+│   │   │   ├── q11_df3f1168.jpg
+│   │   │   ├── q12_7de407b3.jpg
+│   │   │   ├── q18_b357664c.jpg
+│   │   │   ├── q2_aea01d42.jpg
+│   │   │   ├── q30_eec15aeb.jpg
+│   │   │   ├── q34_72f0673b.jpg
+│   │   │   ├── q34a_dea49aa5.jpg
+│   │   │   ├── q35_121ec6c0.jpg
+│   │   │   ├── q36_8949872d.jpg
+│   │   │   ├── q37_199e567a.jpg
+│   │   │   ├── q46_43e646e6.jpg
+│   │   │   ├── q47_a8b512f3.jpg
+│   │   │   ├── q50_9b1eb674.jpg
+│   │   │   ├── q52_bdf780ad.jpg
+│   │   │   ├── q54_6942b936.jpg
+│   │   │   ├── q5_370efc5f.jpg
+│   │   │   └── q62_202711de.jpg
+│   │   ├── GATE_2012
+│   │   │   ├── q12_32353a34.jpg
+│   │   │   ├── q26_2fa9f4d8.jpg
+│   │   │   ├── q26a_9c102615.jpg
+│   │   │   ├── q30_537e8815.jpg
+│   │   │   ├── q31_4db3f95a.jpg
+│   │   │   ├── q36_e237e299.jpg
+│   │   │   ├── q36a_b9042f97.jpg
+│   │   │   ├── q40_17a15b5c.jpg
+│   │   │   ├── q46_bca893f8.jpg
+│   │   │   ├── q46a_ce7a32ca.jpg
+│   │   │   ├── q50_b1b0feea.jpg
+│   │   │   ├── q52_d25c144f.jpg
+│   │   │   └── q6_b26b0b55.jpg
+│   │   ├── GATE_2013
+│   │   │   ├── q11_767103dd.jpg
+│   │   │   ├── q14_d877ec30.jpg
+│   │   │   ├── q23_ec5c245a.jpg
+│   │   │   ├── q33_77a7d1ad.jpg
+│   │   │   ├── q35_e9b3f125.jpg
+│   │   │   ├── q38_436a0614.jpg
+│   │   │   ├── q39_4478bc8b.jpg
+│   │   │   └── q5_f3a25897.jpg
+│   │   ├── GATE_2014_SET-1
+│   │   │   ├── q13_d927c255.jpg
+│   │   │   ├── q16_6458e73d.jpg
+│   │   │   ├── q18_be25b1f5.jpg
+│   │   │   ├── q31_dc5dbfd2.jpg
+│   │   │   ├── q32_3726bcc5.jpg
+│   │   │   ├── q36_eb254c40.jpg
+│   │   │   ├── q38a_1c6d1507.jpg
+│   │   │   └── q45_b1af9dd8.jpg
+│   │   ├── GATE_2014_SET-2
+│   │   │   ├── q22_4febd6f8.jpg
+│   │   │   ├── q25_4b42d41a.jpg
+│   │   │   ├── q26_e2bbe577.jpg
+│   │   │   ├── q29_87119e6e.jpg
+│   │   │   ├── q31_5009409f.jpg
+│   │   │   ├── q32_00c28216.jpg
+│   │   │   ├── q39_dedc3211.jpg
+│   │   │   ├── q52_d03ffa26.jpg
+│   │   │   └── q64_8c72f13a.jpg
+│   │   ├── GATE_2014_SET-3
+│   │   │   ├── q12_da47bc58.jpg
+│   │   │   ├── q13_494e6aeb.jpg
+│   │   │   ├── q26_07b51d41.jpg
+│   │   │   ├── q30_1c9e79a8.jpg
+│   │   │   ├── q32_59e10a11.jpg
+│   │   │   ├── q45_2b4140de.jpg
+│   │   │   └── q64_8c72f13a.jpg
+│   │   ├── GATE_2015_SET-1
+│   │   │   ├── q20_e8cf7316.jpg
+│   │   │   ├── q27_b7722a29.jpg
+│   │   │   ├── q30_38aeed9e.jpg
+│   │   │   ├── q32_4f2be226.jpg
+│   │   │   ├── q36_5e8cdf73.jpg
+│   │   │   ├── q39_1ab3952a.jpg
+│   │   │   ├── q3_33b11b5a.jpg
+│   │   │   ├── q40_cd7993f6.webp
+│   │   │   ├── q51_2717e41f.jpg
+│   │   │   ├── q51a_e0f73a11.jpg
+│   │   │   ├── q53_b563227e.jpg
+│   │   │   ├── q64_b5c8fce9.jpg
+│   │   │   └── q6_bc15dcdb.jpg
+│   │   ├── GATE_2015_SET-2
+│   │   │   ├── q17_dff5c21d.jpg
+│   │   │   ├── q22_adb7a2d5.jpg
+│   │   │   ├── q26_96507893.jpg
+│   │   │   ├── q26a_e40289ea.jpg
+│   │   │   ├── q37_6178654c.jpg
+│   │   │   ├── q38_a55a5118.jpg
+│   │   │   └── q41_af915979.jpg
+│   │   ├── GATE_2015_SET-3
+│   │   │   ├── q21_3ddcb876.jpg
+│   │   │   ├── q26_5ff1a22d.jpg
+│   │   │   ├── q38_2b8ca31a.jpg
+│   │   │   ├── q41_17720076.jpg
+│   │   │   ├── q47_eabb2659.jpg
+│   │   │   ├── q48_b0814d52.jpg
+│   │   │   ├── q53_ddb61680.jpg
+│   │   │   ├── q63_b888cfee.jpg
+│   │   │   └── q65_44ca4c19.jpg
+│   │   ├── GATE_2016_SET-1
+│   │   │   ├── q11_81240da5.jpg
+│   │   │   ├── q23_1293001f.jpg
+│   │   │   ├── q30_c36da989.jpg
+│   │   │   ├── q41_f1da2e75.jpg
+│   │   │   ├── q43_b54e1db2.jpg
+│   │   │   ├── q45_b4da3cf0.jpg
+│   │   │   └── q50_17a8780c.jpg
+│   │   ├── GATE_2016_SET-2
+│   │   │   ├── q19_26e5b72c.jpg
+│   │   │   ├── q39_8d9d79a9.jpg
+│   │   │   ├── q46_7b18643f.jpg
+│   │   │   ├── q47_5095f5ac.jpg
+│   │   │   ├── q48_7f562996.jpg
+│   │   │   ├── q50_ff9c459d.jpg
+│   │   │   ├── q52_3b8c0d21.jpg
+│   │   │   ├── q52a_85159664.jpg
+│   │   │   └── q65_14c1eb7c.jpg
+│   │   ├── GATE_2017_SET-1
+│   │   │   ├── q20_fff46230.jpg
+│   │   │   ├── q26_653272d6.jpg
+│   │   │   ├── q28_d9c8664a.jpg
+│   │   │   ├── q2_5c33715e.jpg
+│   │   │   ├── q35_fb6f6bf4.jpg
+│   │   │   ├── q42_afa2fbc5.jpg
+│   │   │   ├── q4_e0e30ec7.jpg
+│   │   │   ├── q52_7b87d5d2.jpg
+│   │   │   ├── q53_8cbe5db4.jpg
+│   │   │   ├── q65_ba47e62e.jpg
+│   │   │   └── q9_b12a8e72.jpg
+│   │   ├── GATE_2017_SET-2
+│   │   │   ├── q11_05594a74.jpg
+│   │   │   ├── q16_a76213c5.jpg
+│   │   │   ├── q17_4dc50d68.jpg
+│   │   │   ├── q1_8fc65f77.jpg
+│   │   │   ├── q27_9ea2c7ce.jpg
+│   │   │   ├── q3_42abd6c6.jpg
+│   │   │   ├── q41_1d66a9cf.jpg
+│   │   │   ├── q43_6b11f541.jpg
+│   │   │   ├── q45_877a44e0.jpg
+│   │   │   ├── q49_e09ff2a7.jpg
+│   │   │   ├── q49a_79634f62.jpg
+│   │   │   ├── q54_ebe8ef02.jpg
+│   │   │   ├── q65_d9c2620b.jpg
+│   │   │   └── q7_689784b4.jpg
+│   │   ├── GATE_2018
+│   │   │   ├── q12_98ab1de3.jpg
+│   │   │   ├── q13_4a5b162b.jpg
+│   │   │   ├── q18_14abf0c5.jpg
+│   │   │   ├── q22_8ce44ae4.jpg
+│   │   │   ├── q38_52f1a2a9.jpg
+│   │   │   ├── q39_f1f4e800.jpg
+│   │   │   ├── q3_34b9ffa9.jpg
+│   │   │   ├── q40_0aede1be.jpg
+│   │   │   ├── q42_13ce7592.jpg
+│   │   │   ├── q44_ddb859d5.jpg
+│   │   │   ├── q47_241ae69c.jpg
+│   │   │   ├── q48_ac42f524.jpg
+│   │   │   ├── q52_22ba3777.jpg
+│   │   │   └── q64_ef8cbf1a.webp
+│   │   ├── GATE_2019
+│   │   │   ├── q19_b9df82b8.jpg
+│   │   │   ├── q23_e3e5dd62.jpg
+│   │   │   ├── q2_f0302f91.jpg
+│   │   │   ├── q30_614af789.jpg
+│   │   │   ├── q36_b81fa569.jpg
+│   │   │   ├── q41_98bc91e9.jpg
+│   │   │   ├── q51_c175b8ed.jpg
+│   │   │   ├── q55_cdc2944f.jpg
+│   │   │   ├── q55a_38366a3a.jpg
+│   │   │   ├── q62_3cbfda58.jpg
+│   │   │   └── q65_5e93267b.jpg
+│   │   ├── GATE_2020
+│   │   │   ├── q13_00d62b79.jpg
+│   │   │   ├── q28_487c809f.jpg
+│   │   │   ├── q34_ded3142a.jpg
+│   │   │   ├── q37_7982b097.jpg
+│   │   │   ├── q37a_8f7271d7.jpg
+│   │   │   ├── q46_8e3cceff.jpg
+│   │   │   ├── q48_1495b619.jpg
+│   │   │   ├── q4_f58f93bb.jpg
+│   │   │   ├── q50_bc55af2e.jpg
+│   │   │   ├── q60_6c5cda18.jpg
+│   │   │   ├── q63_8037d24a.jpg
+│   │   │   └── q65_9dd6e5f8.jpg
+│   │   ├── GATE_2021_SET-1
+│   │   │   ├── q17_3427ef34.jpg
+│   │   │   ├── q28_23a3fb9c.jpg
+│   │   │   ├── q29_b9ace977.jpg
+│   │   │   ├── q31a_d2bcc2a7.jpg
+│   │   │   ├── q31b_a479fb0a.jpg
+│   │   │   ├── q38_cacc54fd.jpg
+│   │   │   ├── q47_ec8a2570.jpg
+│   │   │   ├── q51a_7888028e.jpg
+│   │   │   ├── q51b_09056d3e.jpg
+│   │   │   ├── q54_a8c051f9.jpg
+│   │   │   ├── q57_ba3aa658.jpg
+│   │   │   ├── q59a_0564cc1c.jpg
+│   │   │   └── q59b_c0d59300.jpg
+│   │   ├── GATE_2021_SET-2
+│   │   │   ├── q17_652cadc0.jpg
+│   │   │   ├── q45_3824beb8.jpg
+│   │   │   ├── q46_8d8f4d68.jpg
+│   │   │   ├── q48_18e02a9f.jpg
+│   │   │   ├── q55_d153f985.jpg
+│   │   │   ├── q57a_be9e410a.jpg
+│   │   │   ├── q57b_4636edfb.jpg
+│   │   │   ├── q5_9ea2ea67.jpg
+│   │   │   ├── q62a_aa0eca0b.jpg
+│   │   │   ├── q62b_25ea02dd.jpg
+│   │   │   └── q64_c2f9b9c0.jpg
+│   │   ├── GATE_2022
+│   │   │   ├── a40_5106ff0c.jpg
+│   │   │   ├── q12_fbd5cfe3.jpg
+│   │   │   ├── q2_1323799a.jpg
+│   │   │   ├── q30_7807d2ff.jpg
+│   │   │   ├── q34_c5d530be.jpg
+│   │   │   ├── q40_76105ee1.jpg
+│   │   │   ├── q46_acaeb162.jpg
+│   │   │   ├── q47_7e9a46a2.jpg
+│   │   │   ├── q52_05348840.jpg
+│   │   │   ├── q5a_ceb02b72.jpg
+│   │   │   ├── q5b_221e4ca2.jpg
+│   │   │   ├── q60_1cbc8258.jpg
+│   │   │   ├── q60a_cb97544a.jpg
+│   │   │   ├── q65_786dd9ea.jpg
+│   │   │   └── q9_47befa18.jpg
+│   │   ├── GATE_2023
+│   │   │   ├── q11_d9777822.jpg
+│   │   │   ├── q20_146e1864.jpg
+│   │   │   ├── q26_acb7b40e.jpg
+│   │   │   ├── q27_d6e3a8a0.jpg
+│   │   │   ├── q30_cad321de.jpg
+│   │   │   ├── q31_991991da.jpg
+│   │   │   ├── q32_9bb50bc2.jpg
+│   │   │   ├── q33_5641701d.jpg
+│   │   │   ├── q34_57cf3cfb.jpg
+│   │   │   ├── q37_50aef616.jpg
+│   │   │   ├── q44_544299d1.jpg
+│   │   │   ├── q4_8a98cf53.jpg
+│   │   │   ├── q52_44be1c2f.jpg
+│   │   │   ├── q65_e5851946.jpg
+│   │   │   └── q9_ec1c38fc.jpg
+│   │   ├── GATE_2024_SET-1
+│   │   │   ├── q10_4a9e0516.webp
+│   │   │   ├── q18_c69f200a.webp
+│   │   │   ├── q40_978712f8.webp
+│   │   │   ├── q54_e1cd6ee8.webp
+│   │   │   ├── q63_def58119.webp
+│   │   │   └── q65_37b86276.webp
+│   │   ├── GATE_2024_SET-2
+│   │   │   ├── q12_7b57ec64.webp
+│   │   │   ├── q31_4d8bc041.webp
+│   │   │   ├── q40_e603cd6e.webp
+│   │   │   ├── q49_7a80742a.webp
+│   │   │   ├── q4_f68c322e.webp
+│   │   │   ├── q4a_b11456d2.webp
+│   │   │   ├── q50_6bd60b4f.webp
+│   │   │   ├── q51_81cf05b3.webp
+│   │   │   ├── q63_e902d47d.webp
+│   │   │   └── q65_f95e0861.webp
+│   │   ├── GATE_2025_SET-1
+│   │   │   ├── q11_d7479bce.webp
+│   │   │   ├── q17_85b8e89d.webp
+│   │   │   ├── q40_3b7ca53e.webp
+│   │   │   ├── q43_7d1f00ff.webp
+│   │   │   ├── q45_06d1065f.webp
+│   │   │   ├── q47_cddf7a5f.webp
+│   │   │   ├── q49_cb7ac266.webp
+│   │   │   ├── q50_6d9fa3b1.webp
+│   │   │   ├── q52_f6797a26.webp
+│   │   │   ├── q54_ee64d343.webp
+│   │   │   ├── q60_d7b5bf82.webp
+│   │   │   ├── q62_858ed1aa.webp
+│   │   │   ├── q64a_4c00fbae.webp
+│   │   │   └── q64b_b423886b.webp
+│   │   ├── GATE_2025_SET-2
+│   │   │   ├── q21_b743d471.webp
+│   │   │   ├── q33_f20ca4cf.webp
+│   │   │   ├── q37_c7e13067.webp
+│   │   │   ├── q49_ae33f918.webp
+│   │   │   ├── q59a_bbf0880b.webp
+│   │   │   ├── q59b_37c3fe6d.webp
+│   │   │   ├── q64_c1510185.webp
+│   │   │   └── q65_9c4479d6.webp
+│   │   ├── GATE_IT_2004
+│   │   │   ├── q39_c74abb15.jpg
+│   │   │   ├── q54_8a5ee516.jpg
+│   │   │   ├── q56_2af842fc.jpg
+│   │   │   ├── q73_7b7dd9cd.jpg
+│   │   │   ├── q89_80e7e8e2.jpg
+│   │   │   └── q90_27c5d01f.jpg
+│   │   ├── GATE_IT_2005
+│   │   │   ├── q10_be2001bc.jpg
+│   │   │   ├── q21_7385a135.jpg
+│   │   │   ├── q37_2cc385ad.jpg
+│   │   │   ├── q43_9beb8fc9.jpg
+│   │   │   ├── q48_572e5c83.jpg
+│   │   │   ├── q65_b295291c.jpg
+│   │   │   ├── q66_5d734776.jpg
+│   │   │   ├── q80_f7bddd1b.jpg
+│   │   │   ├── q80a_818d6efc.jpg
+│   │   │   └── q85a_667c0628.jpg
+│   │   ├── GATE_IT_2006
+│   │   │   ├── q13_276c7f2d.jpg
+│   │   │   ├── q35_73871bb5.jpg
+│   │   │   ├── q36_3b292458.jpg
+│   │   │   ├── q37_9146a2c1.jpg
+│   │   │   ├── q3_da00c87d.jpg
+│   │   │   ├── q41_0ce010b4.jpg
+│   │   │   ├── q46_ea67eee2.jpg
+│   │   │   ├── q53_06595785.jpg
+│   │   │   ├── q59_d7190aa4.jpg
+│   │   │   ├── q5_1a0e53b1.jpg
+│   │   │   └── q62_3ecb8310.jpg
+│   │   ├── GATE_IT_2007
+│   │   │   ├── q11_cd424688.jpg
+│   │   │   ├── q19_4d4dd810.jpg
+│   │   │   ├── q40_8aa2b208.jpg
+│   │   │   ├── q45_cb361b69.jpg
+│   │   │   ├── q47_b4851ece.jpg
+│   │   │   ├── q50_5ee91b7a.jpg
+│   │   │   ├── q50a_f7605ab2.jpg
+│   │   │   ├── q50b_a17fcd95.jpg
+│   │   │   ├── q53_b3c1d7f1.jpg
+│   │   │   ├── q54_5c7502bd.jpg
+│   │   │   ├── q60_1d5695fa.jpg
+│   │   │   ├── q61_15bb219e.jpg
+│   │   │   ├── q66_94480cd3.jpg
+│   │   │   ├── q71_f699dc08.jpg
+│   │   │   ├── q72_68fd615c.jpg
+│   │   │   ├── q78_f8e449ef.jpg
+│   │   │   ├── q84a_d9f1f82d.jpg
+│   │   │   ├── q84b_037c52a6.jpg
+│   │   │   ├── q85a_a2b5c766.jpg
+│   │   │   ├── q85b_b15f9ed2.jpg
+│   │   │   └── q8_8800407c.jpg
+│   │   ├── GATE_IT_2008
+│   │   │   ├── q28a_08279c24.jpg
+│   │   │   ├── q28b_c4039267.jpg
+│   │   │   ├── q28c_758411ea.jpg
+│   │   │   ├── q28d_7c96af31.jpg
+│   │   │   ├── q32_07b3cb36.jpg
+│   │   │   ├── q36_9f601624.jpg
+│   │   │   ├── q37_1826100b.jpg
+│   │   │   ├── q3_d99e6a64.jpg
+│   │   │   ├── q45_f6cfd604.jpg
+│   │   │   ├── q47_3d5ab5a5.jpg
+│   │   │   ├── q58_c8f3f352.jpg
+│   │   │   ├── q69_d0b045bf.jpg
+│   │   │   └── q9_43e48617.jpg
+│   │   ├── General_Aptitude-_CSE
+│   │   │   ├── q57_ba3aa658.jpg
+│   │   │   ├── q57a_be9e410a.jpg
+│   │   │   ├── q57b_4636edfb.jpg
+│   │   │   ├── q59a_0564cc1c.jpg
+│   │   │   ├── q59a_bbf0880b.webp
+│   │   │   ├── q59b_37c3fe6d.webp
+│   │   │   ├── q59b_c0d59300.jpg
+│   │   │   ├── q60_1cbc8258.jpg
+│   │   │   ├── q60_6c5cda18.jpg
+│   │   │   ├── q60_d7b5bf82.webp
+│   │   │   ├── q60a_cb97544a.jpg
+│   │   │   ├── q62_202711de.jpg
+│   │   │   ├── q62_3cbfda58.jpg
+│   │   │   ├── q62_858ed1aa.webp
+│   │   │   ├── q62a_aa0eca0b.jpg
+│   │   │   ├── q62b_25ea02dd.jpg
+│   │   │   ├── q63_8037d24a.jpg
+│   │   │   ├── q63_b888cfee.jpg
+│   │   │   ├── q63_c367ae7b.jpg
+│   │   │   ├── q63_def58119.webp
+│   │   │   ├── q63_e902d47d.webp
+│   │   │   ├── q64_8c72f13a.jpg
+│   │   │   ├── q64_b5c8fce9.jpg
+│   │   │   ├── q64_c1510185.webp
+│   │   │   ├── q64_c2f9b9c0.jpg
+│   │   │   ├── q64_ef8cbf1a.webp
+│   │   │   ├── q64a_4c00fbae.webp
+│   │   │   ├── q64b_b423886b.webp
+│   │   │   ├── q65_14c1eb7c.jpg
+│   │   │   ├── q65_37b86276.webp
+│   │   │   ├── q65_44ca4c19.jpg
+│   │   │   ├── q65_5e93267b.jpg
+│   │   │   ├── q65_786dd9ea.jpg
+│   │   │   ├── q65_9c4479d6.webp
+│   │   │   ├── q65_9dd6e5f8.jpg
+│   │   │   ├── q65_ba47e62e.jpg
+│   │   │   ├── q65_d9c2620b.jpg
+│   │   │   ├── q65_e5851946.jpg
+│   │   │   └── q65_f95e0861.webp
+│   │   ├── Graph_Theory
+│   │   │   ├── a40_5106ff0c.jpg
+│   │   │   ├── q1.15_7ee16da4.jpg
+│   │   │   ├── q11_81240da5.jpg
+│   │   │   ├── q13_494e6aeb.jpg
+│   │   │   ├── q13_d927c255.jpg
+│   │   │   ├── q18_14abf0c5.jpg
+│   │   │   ├── q19_8b840044.jpg
+│   │   │   ├── q21_0bd25948.jpg
+│   │   │   ├── q26_2fa9f4d8.jpg
+│   │   │   ├── q26a_9c102615.jpg
+│   │   │   ├── q3_d99e6a64.jpg
+│   │   │   ├── q40_76105ee1.jpg
+│   │   │   ├── q46_8d8f4d68.jpg
+│   │   │   ├── q46_ea67eee2.jpg
+│   │   │   ├── q47_3d5ab5a5.jpg
+│   │   │   ├── q50_6bd60b4f.webp
+│   │   │   ├── q55_d153f985.jpg
+│   │   │   ├── q5_a742cce6.jpg
+│   │   │   ├── q77_b1b417fc.jpg
+│   │   │   ├── q78_b62ea598.jpg
+│   │   │   └── q7_689784b4.jpg
+│   │   ├── Graph_Traversal
+│   │   │   ├── q11_81240da5.jpg
+│   │   │   ├── q13_494e6aeb.jpg
+│   │   │   ├── q19_8b840044.jpg
+│   │   │   ├── q21_0bd25948.jpg
+│   │   │   ├── q47_3d5ab5a5.jpg
+│   │   │   ├── q49_ae33f918.webp
+│   │   │   ├── q5_a742cce6.jpg
+│   │   │   └── q7_689784b4.jpg
+│   │   ├── Greedy_Technique
+│   │   │   ├── q41_1d66a9cf.jpg
+│   │   │   ├── q48_ac42f524.jpg
+│   │   │   ├── q4_e0e30ec7.jpg
+│   │   │   └── q87_3ccdd455.jpg
+│   │   ├── Group_Theory
+│   │   │   ├── q22_d0235942.jpg
+│   │   │   └── q72_0a54c40c.jpg
+│   │   ├── Hashing
+│   │   │   ├── q14_8c271a02.jpg
+│   │   │   ├── q36_a0accceb.jpg
+│   │   │   ├── q47_ec8a2570.jpg
+│   │   │   └── q52_6208e194.jpg
+│   │   ├── Heap_Tree
+│   │   │   ├── q11_df3f1168.jpg
+│   │   │   ├── q27_b7722a29.jpg
+│   │   │   └── q37_769a47b7.jpg
+│   │   ├── Integrity_Constraints
+│   │   │   ├── q11_05594a74.jpg
+│   │   │   └── q76_054b99cf.jpg
+│   │   ├── Intermediate_Code_Generation
+│   │   │   ├── q36_5e8cdf73.jpg
+│   │   │   ├── q47_a8b512f3.jpg
+│   │   │   ├── q54a_496f1284.jpg
+│   │   │   └── q54b_a712a573.jpg
+│   │   ├── Interrupt
+│   │   │   └── q6.1_1f0bee2f.jpg
+│   │   ├── Lattice
+│   │   │   ├── q1_8fc65f77.jpg
+│   │   │   ├── q28a_08279c24.jpg
+│   │   │   ├── q28b_c4039267.jpg
+│   │   │   ├── q28c_758411ea.jpg
+│   │   │   ├── q28d_7c96af31.jpg
+│   │   │   ├── q32_4f2be226.jpg
+│   │   │   └── q9_8745816a.jpg
+│   │   ├── Linear_Algebra
+│   │   │   └── q20_146e1864.jpg
+│   │   ├── Link_List
+│   │   │   ├── q36_67f03162.jpg
+│   │   │   ├── q49_5ae2437e.jpg
+│   │   │   ├── q52_f6797a26.webp
+│   │   │   ├── q5a_ceb02b72.jpg
+│   │   │   ├── q5b_221e4ca2.jpg
+│   │   │   └── q63_6b78c2e6.jpg
+│   │   ├── Machine_Instruction
+│   │   │   ├── q31_991991da.jpg
+│   │   │   ├── q48_464367e7.jpg
+│   │   │   ├── q4_f58f93bb.jpg
+│   │   │   ├── q51_81cf05b3.webp
+│   │   │   ├── q55_f6311440.jpg
+│   │   │   ├── q63_df1a4f4b.jpg
+│   │   │   └── q71_d5243e81.jpg
+│   │   ├── Matching
+│   │   │   ├── q17_042f5f0c.jpg
+│   │   │   ├── q17_4dc50d68.jpg
+│   │   │   └── q17_dff5c21d.jpg
+│   │   ├── Memory_Chip_Design
+│   │   │   ├── q2_f0302f91.jpg
+│   │   │   └── q32_9bb50bc2.jpg
+│   │   ├── Memory_Management
+│   │   │   ├── q1.24_c629eb08.jpg
+│   │   │   ├── q11_cd424688.jpg
+│   │   │   ├── q37_c7e13067.webp
+│   │   │   └── q48_18e02a9f.jpg
+│   │   ├── Minimum_Spanning_Tree
+│   │   │   ├── q17_3427ef34.jpg
+│   │   │   ├── q38_4d6aca33.jpg
+│   │   │   ├── q45_f6cfd604.jpg
+│   │   │   ├── q47_241ae69c.jpg
+│   │   │   ├── q47_564dc013.jpg
+│   │   │   ├── q49_7a80742a.webp
+│   │   │   ├── q52_bdf780ad.jpg
+│   │   │   ├── q52_d03ffa26.jpg
+│   │   │   ├── q53_b563227e.jpg
+│   │   │   ├── q54_ee64d343.webp
+│   │   │   ├── q56_2af842fc.jpg
+│   │   │   └── q68_3abc224c.jpg
+│   │   ├── Network_Layer_Protocol
+│   │   │   ├── q12_fbd5cfe3.jpg
+│   │   │   ├── q14_d877ec30.jpg
+│   │   │   ├── q25_4b42d41a.jpg
+│   │   │   ├── q26_07b51d41.jpg
+│   │   │   ├── q26_96507893.jpg
+│   │   │   ├── q26a_e40289ea.jpg
+│   │   │   ├── q45_3824beb8.jpg
+│   │   │   ├── q47_7e9a46a2.jpg
+│   │   │   ├── q47_cddf7a5f.webp
+│   │   │   ├── q54_50b0764c.jpg
+│   │   │   ├── q54_6942b936.jpg
+│   │   │   ├── q55_6714c69d.jpg
+│   │   │   ├── q56_23530050.jpg
+│   │   │   ├── q60_1d5695fa.jpg
+│   │   │   └── q85a_667c0628.jpg
+│   │   ├── Normal_Form
+│   │   │   ├── q23_1293001f.jpg
+│   │   │   ├── q42_13ce7592.jpg
+│   │   │   ├── q63_241939ef.jpg
+│   │   │   └── q73_7b7dd9cd.jpg
+│   │   ├── Number_System
+│   │   │   ├── q38_3260c26a.jpg
+│   │   │   ├── q43_dbca8292.jpg
+│   │   │   ├── q4_f68c322e.webp
+│   │   │   ├── q4a_b11456d2.webp
+│   │   │   └── q89_e3556510.jpg
+│   │   ├── Numerical_Ability_–_CSE
+│   │   │   ├── q57_ba3aa658.jpg
+│   │   │   ├── q57a_be9e410a.jpg
+│   │   │   ├── q57b_4636edfb.jpg
+│   │   │   ├── q59a_0564cc1c.jpg
+│   │   │   ├── q59b_c0d59300.jpg
+│   │   │   ├── q60_1cbc8258.jpg
+│   │   │   ├── q60_6c5cda18.jpg
+│   │   │   ├── q60a_cb97544a.jpg
+│   │   │   ├── q62_202711de.jpg
+│   │   │   ├── q62_3cbfda58.jpg
+│   │   │   ├── q62_858ed1aa.webp
+│   │   │   ├── q62a_aa0eca0b.jpg
+│   │   │   ├── q62b_25ea02dd.jpg
+│   │   │   ├── q63_8037d24a.jpg
+│   │   │   ├── q63_b888cfee.jpg
+│   │   │   ├── q63_c367ae7b.jpg
+│   │   │   ├── q63_def58119.webp
+│   │   │   ├── q63_e902d47d.webp
+│   │   │   ├── q64_8c72f13a.jpg
+│   │   │   ├── q64_b5c8fce9.jpg
+│   │   │   ├── q64_c1510185.webp
+│   │   │   ├── q64_c2f9b9c0.jpg
+│   │   │   ├── q64_ef8cbf1a.webp
+│   │   │   ├── q65_14c1eb7c.jpg
+│   │   │   ├── q65_37b86276.webp
+│   │   │   ├── q65_44ca4c19.jpg
+│   │   │   ├── q65_5e93267b.jpg
+│   │   │   ├── q65_786dd9ea.jpg
+│   │   │   ├── q65_9dd6e5f8.jpg
+│   │   │   ├── q65_ba47e62e.jpg
+│   │   │   ├── q65_d9c2620b.jpg
+│   │   │   ├── q65_e5851946.jpg
+│   │   │   └── q65_f95e0861.webp
+│   │   ├── Numerical_Method
+│   │   │   ├── q23_ec5c245a.jpg
+│   │   │   ├── q26_5ff1a22d.jpg
+│   │   │   ├── q39_c74abb15.jpg
+│   │   │   ├── q41_af915979.jpg
+│   │   │   └── q42_3e1e8375.jpg
+│   │   ├── Operating_System
+│   │   │   ├── q1.18_bfc4940d.jpg
+│   │   │   ├── q1.24_c629eb08.jpg
+│   │   │   ├── q10_01cb7317.jpg
+│   │   │   ├── q11_cd424688.jpg
+│   │   │   ├── q13_276c7f2d.jpg
+│   │   │   ├── q16_f9f2d561.jpg
+│   │   │   ├── q20_e8cf7316.jpg
+│   │   │   ├── q21_3ddcb876.jpg
+│   │   │   ├── q23_0dd65df2.jpg
+│   │   │   ├── q23_e3e5dd62.jpg
+│   │   │   ├── q27_9ea2c7ce.jpg
+│   │   │   ├── q30_5bca0566.jpg
+│   │   │   ├── q31_4db3f95a.jpg
+│   │   │   ├── q31_5009409f.jpg
+│   │   │   ├── q31_dc5dbfd2.jpg
+│   │   │   ├── q32_00c28216.jpg
+│   │   │   ├── q32_3726bcc5.jpg
+│   │   │   ├── q32_59e10a11.jpg
+│   │   │   ├── q32_667f85ac.jpg
+│   │   │   ├── q34_ded3142a.jpg
+│   │   │   ├── q37_c7e13067.webp
+│   │   │   ├── q39_4478bc8b.jpg
+│   │   │   ├── q39_f1f4e800.jpg
+│   │   │   ├── q40_0aede1be.jpg
+│   │   │   ├── q41_98bc91e9.jpg
+│   │   │   ├── q43_6b11f541.jpg
+│   │   │   ├── q45_03507a62.jpg
+│   │   │   ├── q46_0eee0bd6.jpg
+│   │   │   ├── q46_43e646e6.jpg
+│   │   │   ├── q47_5095f5ac.jpg
+│   │   │   ├── q47_eabb2659.jpg
+│   │   │   ├── q48_18e02a9f.jpg
+│   │   │   ├── q48_7f562996.jpg
+│   │   │   ├── q50_17a8780c.jpg
+│   │   │   ├── q50_bc55af2e.jpg
+│   │   │   ├── q57_d0cca1a4.jpg
+│   │   │   ├── q58_1fce4bcb.jpg
+│   │   │   ├── q71_66b23f1e.jpg
+│   │   │   ├── q9_47befa18.jpg
+│   │   │   └── q9_b12a8e72.jpg
+│   │   ├── Parsing
+│   │   │   ├── q19_b9df82b8.jpg
+│   │   │   ├── q37_199e567a.jpg
+│   │   │   ├── q38_52f1a2a9.jpg
+│   │   │   ├── q45_57f67ac9.jpg
+│   │   │   ├── q46_7b18643f.jpg
+│   │   │   ├── q51_b2e86863.jpg
+│   │   │   ├── q52_d25c144f.jpg
+│   │   │   ├── q84_2026e286.jpg
+│   │   │   └── q84_bef15a5a.jpg
+│   │   ├── Physical_Layer
+│   │   │   └── q61_15bb219e.jpg
+│   │   ├── Pipeline_Processor
+│   │   │   ├── q28_52a82c1b.jpg
+│   │   │   ├── q30_eec15aeb.jpg
+│   │   │   ├── q33_b6d0f7e6.jpg
+│   │   │   └── q38_2b8ca31a.jpg
+│   │   ├── Planar_Graph
+│   │   │   ├── q47_d0c7ddfc.jpg
+│   │   │   └── q5_370efc5f.jpg
+│   │   ├── Probability_Theory
+│   │   │   ├── q44_ddb859d5.jpg
+│   │   │   ├── q54_a8c051f9.jpg
+│   │   │   └── q56_52f2f910.jpg
+│   │   ├── Process
+│   │   │   ├── q1.18_bfc4940d.jpg
+│   │   │   ├── q13_276c7f2d.jpg
+│   │   │   └── q32_667f85ac.jpg
+│   │   ├── Process_Synchronization
+│   │   │   ├── q20_e8cf7316.jpg
+│   │   │   ├── q21_3ddcb876.jpg
+│   │   │   ├── q23_0dd65df2.jpg
+│   │   │   ├── q23_e3e5dd62.jpg
+│   │   │   ├── q31_5009409f.jpg
+│   │   │   ├── q34_ded3142a.jpg
+│   │   │   ├── q39_4478bc8b.jpg
+│   │   │   ├── q40_0aede1be.jpg
+│   │   │   ├── q45_03507a62.jpg
+│   │   │   ├── q48_7f562996.jpg
+│   │   │   ├── q50_17a8780c.jpg
+│   │   │   ├── q58_1fce4bcb.jpg
+│   │   │   └── q9_47befa18.jpg
+│   │   ├── Propositional_Logic
+│   │   │   ├── q30_38aeed9e.jpg
+│   │   │   ├── q32_3d05448c.jpg
+│   │   │   └── q71_1baeed35.jpg
+│   │   ├── Push-down_Automata
+│   │   │   ├── q30_cad321de.jpg
+│   │   │   ├── q40_d8080bd1.jpg
+│   │   │   ├── q43_b54e1db2.jpg
+│   │   │   ├── q51a_7888028e.jpg
+│   │   │   └── q51b_09056d3e.jpg
+│   │   ├── Queue
+│   │   │   ├── q3_34b9ffa9.jpg
+│   │   │   ├── q41_f1da2e75.jpg
+│   │   │   └── q52_05348840.jpg
+│   │   ├── Regular_Expression
+│   │   │   ├── q12_7b57ec64.webp
+│   │   │   ├── q31_4d8bc041.webp
+│   │   │   ├── q4_8a98cf53.jpg
+│   │   │   ├── q5_1a0e53b1.jpg
+│   │   │   ├── q71_f699dc08.jpg
+│   │   │   ├── q72_68fd615c.jpg
+│   │   │   └── q9_ec1c38fc.jpg
+│   │   ├── Regular_Grammar
+│   │   │   └── q88_01955160.jpg
+│   │   ├── Relational_Algebra
+│   │   │   ├── q30_1c9e79a8.jpg
+│   │   │   ├── q50_b1b0feea.jpg
+│   │   │   ├── q51_5155e252.jpg
+│   │   │   ├── q53_8cbe5db4.jpg
+│   │   │   ├── q55_cdc2944f.jpg
+│   │   │   ├── q55a_38366a3a.jpg
+│   │   │   └── q59_39d5133d.jpg
+│   │   ├── Relational_Schema
+│   │   │   ├── q22_4febd6f8.jpg
+│   │   │   └── q50_e0841df0.jpg
+│   │   ├── Runtime_Environment
+│   │   │   ├── q19_26e5b72c.jpg
+│   │   │   ├── q2.16_85b2e6fd.jpg
+│   │   │   ├── q27_d6e3a8a0.jpg
+│   │   │   ├── q36_e237e299.jpg
+│   │   │   └── q36a_b9042f97.jpg
+│   │   ├── SQL
+│   │   │   ├── q12_98ab1de3.jpg
+│   │   │   ├── q13_00d62b79.jpg
+│   │   │   ├── q19_f503c6ab.jpg
+│   │   │   ├── q20_fff46230.jpg
+│   │   │   ├── q30_9bb6a32e.jpg
+│   │   │   ├── q35_e9b3f125.jpg
+│   │   │   ├── q36_8949872d.jpg
+│   │   │   ├── q45_06d1065f.webp
+│   │   │   ├── q46_acaeb162.jpg
+│   │   │   ├── q49_e09ff2a7.jpg
+│   │   │   ├── q49a_79634f62.jpg
+│   │   │   ├── q50_b1b0feea.jpg
+│   │   │   ├── q51_2717e41f.jpg
+│   │   │   ├── q51_c175b8ed.jpg
+│   │   │   ├── q51a_e0f73a11.jpg
+│   │   │   ├── q52_3b8c0d21.jpg
+│   │   │   ├── q52a_85159664.jpg
+│   │   │   └── q67_9153671d.jpg
+│   │   ├── Sequential_Circuit
+│   │   │   ├── q1-IIIa_c5e723c0.jpg
+│   │   │   ├── q1-IIIb_b72e4b1f.jpg
+│   │   │   ├── q12_9957c677.jpg
+│   │   │   ├── q13-a_8cd52ef1.jpg
+│   │   │   ├── q2.12_fdfc937b.jpg
+│   │   │   ├── q21_8a077758.jpg
+│   │   │   ├── q22_8ce44ae4.jpg
+│   │   │   ├── q26_653272d6.jpg
+│   │   │   ├── q28_23a3fb9c.jpg
+│   │   │   ├── q32_3fa4a72d.jpg
+│   │   │   ├── q33_393353a9.jpg
+│   │   │   ├── q33_5641701d.jpg
+│   │   │   ├── q33a_85f13d9e.jpg
+│   │   │   ├── q37_0fb4170a.jpg
+│   │   │   ├── q37_1826100b.jpg
+│   │   │   ├── q37_e0f7fd7d.jpg
+│   │   │   ├── q40_8aa2b208.jpg
+│   │   │   ├── q43_9beb8fc9.jpg
+│   │   │   ├── q45_2b4140de.jpg
+│   │   │   ├── q50_6d9fa3b1.webp
+│   │   │   ├── q50_9b1eb674.jpg
+│   │   │   ├── q61_a3e4c9c5.jpg
+│   │   │   ├── q62a_17c9e04f.jpg
+│   │   │   ├── q62b_0f53b511.jpg
+│   │   │   ├── q64_7a27fad2.jpg
+│   │   │   ├── q64a_40774770.jpg
+│   │   │   ├── q8_ab7840a0.jpg
+│   │   │   └── q8b_f9d0bfca.jpg
+│   │   ├── Set_Theory
+│   │   │   ├── q26a_1e74edb6.jpg
+│   │   │   └── q26b_a8cedcd5.jpg
+│   │   ├── Shortest_Path
+│   │   │   ├── q40_17a15b5c.jpg
+│   │   │   ├── q44_a86a1440.jpg
+│   │   │   └── q45_821c052a.jpg
+│   │   ├── Software_Engg.
+│   │   │   ├── q18_b357664c.jpg
+│   │   │   ├── q18_be25b1f5.jpg
+│   │   │   ├── q21_faca9423.jpg
+│   │   │   ├── q22_be53474f.jpg
+│   │   │   ├── q28_30e254ff.jpg
+│   │   │   ├── q34_8a5008c5.jpg
+│   │   │   ├── q35_121ec6c0.jpg
+│   │   │   ├── q38_436a0614.jpg
+│   │   │   ├── q48_b0814d52.jpg
+│   │   │   ├── q53_b3c1d7f1.jpg
+│   │   │   ├── q54_5c7502bd.jpg
+│   │   │   ├── q58_c8f3f352.jpg
+│   │   │   ├── q59_d7190aa4.jpg
+│   │   │   ├── q60_94e49493.jpg
+│   │   │   ├── q65_a5fbc5f0.jpg
+│   │   │   ├── q65_b295291c.jpg
+│   │   │   ├── q66_5d734776.jpg
+│   │   │   └── q6_bc15dcdb.jpg
+│   │   ├── Syntax-directed_Translation
+│   │   │   └── q36_b81fa569.jpg
+│   │   ├── Theory_of_Computation
+│   │   │   ├── q12_32353a34.jpg
+│   │   │   ├── q12_7b57ec64.webp
+│   │   │   ├── q16_6458e73d.jpg
+│   │   │   ├── q17_652cadc0.jpg
+│   │   │   ├── q26_91f4cce6.jpg
+│   │   │   ├── q27_3a17281d.jpg
+│   │   │   ├── q2_1323799a.jpg
+│   │   │   ├── q30_cad321de.jpg
+│   │   │   ├── q30_efb2d498.jpg
+│   │   │   ├── q31_4d8bc041.webp
+│   │   │   ├── q31a_d2bcc2a7.jpg
+│   │   │   ├── q31b_a479fb0a.jpg
+│   │   │   ├── q32_07b3cb36.jpg
+│   │   │   ├── q33_77a7d1ad.jpg
+│   │   │   ├── q33_84a6e545.jpg
+│   │   │   ├── q34_72f0673b.jpg
+│   │   │   ├── q34a_dea49aa5.jpg
+│   │   │   ├── q36_9f601624.jpg
+│   │   │   ├── q36_eb254c40.jpg
+│   │   │   ├── q37_2cc385ad.jpg
+│   │   │   ├── q37_9146a2c1.jpg
+│   │   │   ├── q38_cacc54fd.jpg
+│   │   │   ├── q39_1ab3952a.jpg
+│   │   │   ├── q3_da00c87d.jpg
+│   │   │   ├── q40_3b7ca53e.webp
+│   │   │   ├── q40_978712f8.webp
+│   │   │   ├── q40_d8080bd1.jpg
+│   │   │   ├── q41_9ac32b02.jpg
+│   │   │   ├── q43_b54e1db2.jpg
+│   │   │   ├── q46_bca893f8.jpg
+│   │   │   ├── q46a_ce7a32ca.jpg
+│   │   │   ├── q47_b4851ece.jpg
+│   │   │   ├── q49_cb7ac266.webp
+│   │   │   ├── q49a_47d407d6.jpg
+│   │   │   ├── q49b_02ea6677.jpg
+│   │   │   ├── q4_8a98cf53.jpg
+│   │   │   ├── q50_5ee91b7a.jpg
+│   │   │   ├── q50_fa81a7bc.jpg
+│   │   │   ├── q50a_f7605ab2.jpg
+│   │   │   ├── q50b_a17fcd95.jpg
+│   │   │   ├── q51a_7888028e.jpg
+│   │   │   ├── q51b_09056d3e.jpg
+│   │   │   ├── q52_22ba3777.jpg
+│   │   │   ├── q52_abcd3d90.jpg
+│   │   │   ├── q53_abd93de7.jpg
+│   │   │   ├── q53_b2cf6cf5.jpg
+│   │   │   ├── q54_ebe8ef02.jpg
+│   │   │   ├── q55_99884634.jpg
+│   │   │   ├── q5_1a0e53b1.jpg
+│   │   │   ├── q63_5d9c1d2c.jpg
+│   │   │   ├── q71_f699dc08.jpg
+│   │   │   ├── q72_68fd615c.jpg
+│   │   │   ├── q73_a73a9f88.jpg
+│   │   │   ├── q74_2189d193.jpg
+│   │   │   ├── q79_655f330d.jpg
+│   │   │   ├── q86_69a22ade.jpg
+│   │   │   ├── q88_01955160.jpg
+│   │   │   └── q9_ec1c38fc.jpg
+│   │   ├── Transactions
+│   │   │   ├── q15_d25b3ef5.jpg
+│   │   │   ├── q29_87119e6e.jpg
+│   │   │   ├── q37_7982b097.jpg
+│   │   │   ├── q37a_8f7271d7.jpg
+│   │   │   ├── q41_17720076.jpg
+│   │   │   ├── q42_afa2fbc5.jpg
+│   │   │   ├── q42_ec75b74c.jpg
+│   │   │   ├── q66_94480cd3.jpg
+│   │   │   └── q87_3fcdb821.jpg
+│   │   ├── Transport_Layer_Protocol
+│   │   │   ├── q13_4a5b162b.jpg
+│   │   │   └── q69_d0b045bf.jpg
+│   │   ├── Tuple_Calculus
+│   │   │   ├── q35_fb6f6bf4.jpg
+│   │   │   ├── q49_d1539589.jpg
+│   │   │   └── q60_8949e2c3.jpg
+│   │   ├── Turing_Machine
+│   │   │   ├── q49_cb7ac266.webp
+│   │   │   └── q53_abd93de7.jpg
+│   │   ├── Verbal_Ability_–_CSE
+│   │   │   ├── q59a_bbf0880b.webp
+│   │   │   ├── q59b_37c3fe6d.webp
+│   │   │   ├── q60_d7b5bf82.webp
+│   │   │   ├── q64a_4c00fbae.webp
+│   │   │   ├── q64b_b423886b.webp
+│   │   │   └── q65_9c4479d6.webp
+│   │   ├── Web_Technology
+│   │   │   ├── q11_767103dd.jpg
+│   │   │   ├── q19_4d4dd810.jpg
+│   │   │   ├── q20_e09e5d82.jpg
+│   │   │   ├── q62_3ecb8310.jpg
+│   │   │   ├── q75_a7966c14.jpg
+│   │   │   ├── q80_f7bddd1b.jpg
+│   │   │   ├── q80a_818d6efc.jpg
+│   │   │   ├── q89_80e7e8e2.jpg
+│   │   │   └── q90_27c5d01f.jpg
+│   │   └── n-ary_Tree
+│   │       └── q12_da47bc58.jpg
+│   ├── logo.png
+│   ├── logo_iit_madras_without_background.png
+│   ├── profile_photo_default.png
+│   └── profile_photo_without_background.png
+├── imp_ai_command.txt
+├── index.html
+├── js
+│   ├── analytics_script.js
+│   ├── dark_mode.js
+│   ├── db.js
+│   ├── exam_library_script.js
+│   ├── exam_script.js
+│   └── result_script.js
+├── output.txt
+├── result.html
+├── server.js
+└── silly_mistakes.html
+
+851 directories, 2888 files
