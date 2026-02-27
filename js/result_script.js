@@ -1510,6 +1510,7 @@ function retryMistakes(summary, details) {
 
     // Store in sessionStorage for the exam page to pick up
     sessionStorage.setItem('retryExamData', JSON.stringify(retryExam));
+    sessionStorage.setItem('triggerAutoStart', 'true');
     window.location.href = 'index.html';
 }
 
@@ -1583,5 +1584,6 @@ function retryUnattempted(summary, details) {
     };
 
     sessionStorage.setItem('retryExamData', JSON.stringify(retryExam));
+    sessionStorage.setItem('triggerAutoStart', 'true');
     window.location.href = 'index.html';
 }

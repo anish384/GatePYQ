@@ -1240,26 +1240,32 @@ body {
    GATE EXAM INTERFACE - CODE BLOCK STYLING
    ============================================ */
 pre {
-    background: #ffffff; /* Plain white to match the exam canvas */
+    background: #ffffff;
+    /* Plain white to match the exam canvas */
     padding: 12px;
-    border: 1px solid #a0a0a0; /* Harsher, standard-contrast border */
-    border-radius: 0; /* Crucial: The official interface uses sharp, 90-degree corners */
+    border: 1px solid #a0a0a0;
+    /* Harsher, standard-contrast border */
+    border-radius: 0;
+    /* Crucial: The official interface uses sharp, 90-degree corners */
     overflow-x: auto;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
     margin: 10px 0;
-    color: #000000; /* Strict black text */
+    color: #000000;
+    /* Strict black text */
 }
 
 code {
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
-    background: transparent; /* No background box for inline code */
+    background: transparent;
+    /* No background box for inline code */
     padding: 0;
     border: none;
     border-radius: 0;
     color: #000000;
 }
+
 /* pre {
     background: #f5f5f5;
     padding: 10px;
@@ -2780,5 +2786,6 @@ body,
 
 /* Targets all MathJax output */
 .MathJax {
-    font-size: 1.2em; /* Adjust this value as needed (e.g., 1.5em, 120%, 20px) */
+    font-size: 1.2em;
+    /* Adjust this value as needed (e.g., 1.5em, 120%, 20px) */
 }

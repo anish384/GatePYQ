@@ -31,7 +31,7 @@
         };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-     <!-- <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js" async></script> -->
+    <!-- <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js" async></script> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -59,17 +59,25 @@
                 📚 Exam Library
             </a>
         </div>
+
         <div class="data-management" style="text-align:center; margin-top:10px; margin-bottom: 15px;">
             <button id="exportDataBtn" onclick="handleExportData()"
                 style="background:none; border:none; color:#3498db; cursor:pointer; font-size:14px; text-decoration:underline;">📥
                 Backup All Data</button>
+
             <span style="color:#666; margin:0 10px;">|</span>
+
             <button id="importDataBtn" onclick="document.getElementById('importFileInput').click()"
                 style="background:none; border:none; color:#e74c3c; cursor:pointer; font-size:14px; text-decoration:underline;">📤
                 Restore Data</button>
             <input type="file" id="importFileInput" style="display:none;" accept=".json"
                 onchange="handleImportData(event)">
-            </span>
+
+            <span style="color:#666; margin:0 10px;">|</span>
+
+            <a href="support.html"
+                style="background:none; border:none; color:#f39c12; cursor:pointer; font-size:14px; text-decoration:underline; display:inline-block;">☕
+                Buy me a coffee</a>
         </div>
         <button class="dark-mode-toggle standalone" id="uploadDarkToggle" title="Toggle Dark Mode">
             <span class="icon-moon">🌙</span>
@@ -256,20 +264,20 @@
                 <span class="question-timer-label">Q. Time :</span>
                 <div class="question-timer-display" id="questionTimerDisplay">00:00</div>
             </div> -->
-                <div class="question-number-bar">
-                    <button class="calc-icon-btn" id="calculatorBtn" title="Virtual Calculator">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="#3a9bd9">
-                            <rect x="2" y="2" width="20" height="20" rx="3" fill="#3a9bd9" />
-                            <rect x="5" y="4" width="14" height="5" rx="1" fill="#fff" />
-                            <rect x="5" y="11" width="3" height="3" rx="0.5" fill="#fff" />
-                            <rect x="10.5" y="11" width="3" height="3" rx="0.5" fill="#fff" />
-                            <rect x="16" y="11" width="3" height="3" rx="0.5" fill="#fff" />
-                            <rect x="5" y="16" width="3" height="3" rx="0.5" fill="#fff" />
-                            <rect x="10.5" y="16" width="3" height="3" rx="0.5" fill="#fff" />
-                            <rect x="16" y="16" width="3" height="3" rx="0.5" fill="#fff" />
-                        </svg>
-                    </button>
-                </div>
+            <div class="question-number-bar">
+                <button class="calc-icon-btn" id="calculatorBtn" title="Virtual Calculator">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#3a9bd9">
+                        <rect x="2" y="2" width="20" height="20" rx="3" fill="#3a9bd9" />
+                        <rect x="5" y="4" width="14" height="5" rx="1" fill="#fff" />
+                        <rect x="5" y="11" width="3" height="3" rx="0.5" fill="#fff" />
+                        <rect x="10.5" y="11" width="3" height="3" rx="0.5" fill="#fff" />
+                        <rect x="16" y="11" width="3" height="3" rx="0.5" fill="#fff" />
+                        <rect x="5" y="16" width="3" height="3" rx="0.5" fill="#fff" />
+                        <rect x="10.5" y="16" width="3" height="3" rx="0.5" fill="#fff" />
+                        <rect x="16" y="16" width="3" height="3" rx="0.5" fill="#fff" />
+                    </svg>
+                </button>
+            </div>
             <div class="timer-container">
                 <span class="time-left-label">Time Left :</span>
                 <div class="timer-display" id="timeDisplay">00:00:00</div>

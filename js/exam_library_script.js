@@ -4,13 +4,13 @@
 
     // ====== State ======
     let indexData = null;
-    let attemptMap = {};   
+    let attemptMap = {};
     let activeFilter = 'all';
     let searchTerm = '';
 
     // Multi-Select State
     let isMultiSelectMode = false;
-    let selectedExams = new Map(); 
+    let selectedExams = new Map();
 
     // ====== DOM Refs ======
     const contentEl = document.getElementById('libContent');
@@ -22,7 +22,7 @@
     const multiSelectToggle = document.getElementById('multiSelectToggle');
     const multiSelectFab = document.getElementById('multiSelectFab');
     const fabSelectedCount = document.getElementById('fabSelectedCount');
-    const fabAvailableCount = document.getElementById('fabAvailableCount'); 
+    const fabAvailableCount = document.getElementById('fabAvailableCount');
     const fabTotalQuestions = document.getElementById('fabTotalQuestions');
     const fabGenerateBtn = document.getElementById('fabGenerateBtn');
 
@@ -46,7 +46,7 @@
         if (contentEl) {
             contentEl.innerHTML = '<div class="lib-loading"><div class="spinner"></div><br>Loading exam library...</div>';
         }
-        
+
         try {
             if (window.EXAM_INDEX) {
                 // 1. Static Index loaded via <script> tag (Safest for GitHub Pages)
@@ -70,7 +70,7 @@
                         if (!apiResp.ok) throw new Error('API returned ' + apiResp.status);
                         indexData = await apiResp.json();
                     } else {
-                        throw err; 
+                        throw err;
                     }
                 }
             } else {
@@ -214,7 +214,6 @@
                 <div class="exam-item-meta">
                     ${metaTags}
                     ${ticksHtml}
-                    ${!isMultiSelectMode ? actionHtml : ''}
                 </div>
             </div>`;
     }
@@ -228,7 +227,7 @@
                 multiSelectToggle.innerHTML = '❌ Cancel Multi-Select';
                 multiSelectToggle.style.backgroundColor = '#e74c3c';
                 multiSelectToggle.style.borderColor = '#c0392b';
-                if(multiSelectFab) multiSelectFab.style.display = 'flex';
+                if (multiSelectFab) multiSelectFab.style.display = 'flex';
                 selectedExams.clear();
                 updateFabUI();
             } else {
@@ -236,7 +235,7 @@
                 multiSelectToggle.innerHTML = '✨ Multi-Select Exam';
                 multiSelectToggle.style.backgroundColor = 'rgba(155, 89, 182, 0.2)';
                 multiSelectToggle.style.borderColor = '#9b59b6';
-                if(multiSelectFab) multiSelectFab.style.display = 'none';
+                if (multiSelectFab) multiSelectFab.style.display = 'none';
                 selectedExams.clear();
             }
         }
@@ -292,13 +291,13 @@
     window.generateCustomExam = async function () {
         if (selectedExams.size === 0) return;
         const totalRequested = parseInt(fabTotalQuestions ? fabTotalQuestions.value : 50, 10);
-        
+
         if (isNaN(totalRequested) || totalRequested < 1) {
             alert('Please enter a valid number of total questions.');
             return;
         }
 
-        if(fabGenerateBtn) {
+        if (fabGenerateBtn) {
             fabGenerateBtn.disabled = true;
             fabGenerateBtn.textContent = 'Generating... ⌛';
         }
@@ -316,12 +315,13 @@
 
             const customExam = generateMixedExamData(rawExamsData, totalRequested);
             sessionStorage.setItem('retryExamData', JSON.stringify(customExam));
+            sessionStorage.setItem('triggerAutoStart', 'true');
             window.location.href = 'index.html';
 
         } catch (error) {
             console.error(error);
             alert('❌ Error generating custom exam: ' + error.message);
-            if(fabGenerateBtn){
+            if (fabGenerateBtn) {
                 fabGenerateBtn.disabled = false;
                 fabGenerateBtn.textContent = 'Generate & Start ▶';
             }
@@ -437,6 +437,7 @@
                 delete window.__examLoadCallback;
                 try {
                     sessionStorage.setItem('retryExamData', JSON.stringify(examData));
+                    sessionStorage.setItem('triggerAutoStart', 'true');
                     window.location.href = 'index.html';
                 } catch (e) {
                     alert('❌ Storage Error: ' + e.message);
@@ -462,7 +463,8 @@
                 })
                 .then(examData => {
                     sessionStorage.setItem('retryExamData', JSON.stringify(examData));
-                    window.location.href = 'index.html'; 
+                    sessionStorage.setItem('triggerAutoStart', 'true');
+                    window.location.href = 'index.html';
                 })
                 .catch(e => {
                     alert('❌ Error loading exam: ' + e.message);
