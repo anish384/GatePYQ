@@ -22,33 +22,50 @@
     const multiSelectToggle = document.getElementById('multiSelectToggle');
     const multiSelectFab = document.getElementById('multiSelectFab');
     const fabSelectedCount = document.getElementById('fabSelectedCount');
+    const fabAvailableCount = document.getElementById('fabAvailableCount'); // Added missing DOM ref
     const fabTotalQuestions = document.getElementById('fabTotalQuestions');
     const fabGenerateBtn = document.getElementById('fabGenerateBtn');
 
-    // ====== Detect if running on a local server (http) or file:// ======
-    const isHttpMode = window.location.protocol.startsWith('http');
+    // ====== Environment Detection ======
+    const isFileMode = window.location.protocol === 'file:';
+    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
     // ====== Init ======
     await loadAttemptData();
     await loadIndex();
 
-    // ====== Load exam index: try dynamic API first, fall back to static ======
+    // ====== Load exam index: prioritize static for GitHub Pages ======
     async function loadIndex() {
         contentEl.innerHTML = '<div class="lib-loading"><div class="spinner"></div><br>Loading exam library...</div>';
         try {
-            if (isHttpMode) {
-                // Dynamic: fetch from server API
-                const resp = await fetch('/api/exam-index');
-                if (!resp.ok) throw new Error('API returned ' + resp.status);
-                indexData = await resp.json();
-            } else {
-                // Static fallback: use pre-generated exam_index.js
-                if (!window.EXAM_INDEX) throw new Error('EXAM_INDEX not found');
+            if (window.EXAM_INDEX) {
+                // 1. First priority: Pre-loaded static index (best for GitHub Pages)
                 indexData = window.EXAM_INDEX;
+            } else if (!isFileMode) {
+                // 2. Second priority: Try fetching static JSON using a relative path
+                try {
+                    const resp = await fetch('./exam_index.json');
+                    if (resp.ok) {
+                        indexData = await resp.json();
+                    } else {
+                        throw new Error('Static index not found');
+                    }
+                } catch (err) {
+                    // 3. Fallback: Local dynamic Node API (only if running locally)
+                    if (isLocalhost) {
+                        const apiResp = await fetch('/api/exam-index');
+                        if (!apiResp.ok) throw new Error('API returned ' + apiResp.status);
+                        indexData = await apiResp.json();
+                    } else {
+                        throw err; // Re-throw if on GitHub Pages and static fetch fails
+                    }
+                }
+            } else {
+                throw new Error('EXAM_INDEX not found. Ensure exam_index.js is loaded in file:// mode.');
             }
             render();
         } catch (e) {
-            contentEl.innerHTML = '<div class="lib-empty">❌ Failed to load exam library.<br><small>Run <code>node server.js</code> for dynamic loading, or <code>node generate_exam_index.js</code> for static mode.</small></div>';
+            contentEl.innerHTML = '<div class="lib-empty">❌ Failed to load exam library.<br><small>Make sure you ran <code>node generate_exam_index.js</code> before pushing to GitHub!</small></div>';
             console.error(e);
         }
     }
@@ -122,11 +139,7 @@
 
         contentEl.innerHTML = html;
         updateStats(totalExams, totalAttempted);
-
-        // Show index timestamp
         updateIndexTimestamp();
-
-        // Apply search filter if active
         if (searchTerm) applySearch();
     }
 
@@ -134,18 +147,14 @@
         if (!items || items.length === 0) return '';
         let html = '';
 
-        // Separate folders from exams and flatten single-exam folders 
         const folders = items.filter(i => i.type === 'folder');
         const exams = items.filter(i => i.type === 'exam');
 
-        // Render exams first at this level
         exams.forEach(exam => {
             html += renderExamItem(exam, depth);
         });
 
-        // Render folders
         folders.forEach(folder => {
-            // If a folder has only one child that is an exam, flatten it
             if (folder.children.length === 1 && folder.children[0].type === 'exam') {
                 html += renderExamItem(folder.children[0], depth);
             } else {
@@ -222,7 +231,7 @@
                 selectedExams.clear();
             }
         }
-        render(); // re-render to show/hide checkboxes
+        render();
     };
 
     window.toggleExamCheckbox = function (el) {
@@ -290,7 +299,6 @@
 
         try {
             const rawExamsData = [];
-            // Fetch all selected exams one by one
             for (const [file, examMeta] of selectedExams) {
                 const data = await fetchExamData(file);
                 if (data && data.sections) {
@@ -303,8 +311,6 @@
             }
 
             const customExam = generateMixedExamData(rawExamsData, totalRequested);
-
-            // Save and launch
             sessionStorage.setItem('retryExamData', JSON.stringify(customExam));
             window.location.href = 'index.html';
 
@@ -316,73 +322,76 @@
         }
     };
 
-    // Helper to fetch exam data
-    // HTTP mode: uses fetch() directly (no CORS issues on localhost)
-    // File mode: uses JSONP-style _load.js scripts
+    // ====== Fetch Exam Data (GitHub Pages relative fetch logic) ======
     let _fetchIdCounter = 0;
     function fetchExamData(jsonFile) {
-        if (isHttpMode) {
-            // HTTP mode: direct fetch via API
-            return fetch('/api/exam-data?file=' + encodeURIComponent(jsonFile))
-                .then(r => {
-                    if (!r.ok) throw new Error('Failed to load: ' + jsonFile);
-                    return r.json();
+        if (isFileMode) {
+            // File:// mode: JSONP with unique callbacks
+            return new Promise((resolve, reject) => {
+                const jsFile = jsonFile.replace(/\.json$/, '_load.js');
+                const callbackName = '__examLoadCB_' + (++_fetchIdCounter) + '_' + Date.now();
+                let resolved = false;
+
+                window[callbackName] = function (examData) {
+                    if (resolved) return;
+                    resolved = true;
+                    delete window[callbackName];
+                    resolve(examData);
+                };
+
+                window.__examLoadCallback = function (examData) {
+                    if (resolved) return;
+                    resolved = true;
+                    delete window[callbackName];
+                    resolve(examData);
+                };
+
+                const script = document.createElement('script');
+                script.src = jsFile;
+                script.onload = () => {
+                    try { document.head.removeChild(script); } catch (e) { }
+                    setTimeout(() => {
+                        if (!resolved) {
+                            resolved = true;
+                            delete window[callbackName];
+                            console.warn(`Timeout loading: ${jsFile}`);
+                            resolve(null);
+                        }
+                    }, 3000);
+                };
+                script.onerror = () => {
+                    if (!resolved) {
+                        resolved = true;
+                        delete window[callbackName];
+                    }
+                    try { document.head.removeChild(script); } catch (e) { }
+                    console.warn(`Failed to load script: ${jsFile}`);
+                    resolve(null);
+                };
+                document.head.appendChild(script);
+            });
+        } else {
+            // HTTP/HTTPS Mode (GitHub Pages or Localhost)
+            // Try fetching the raw JSON file natively using its relative path!
+            return fetch(jsonFile)
+                .then(async r => {
+                    if (r.ok) return r.json();
+                    
+                    // If native static fetch fails, and we are locally running the node app, try the API
+                    if (isLocalhost) {
+                        const apiRes = await fetch('/api/exam-data?file=' + encodeURIComponent(jsonFile));
+                        if (apiRes.ok) return apiRes.json();
+                    }
+                    throw new Error('Failed to load: ' + jsonFile);
                 })
                 .catch(err => {
                     console.warn('Fetch failed for ' + jsonFile + ':', err);
                     return null;
                 });
         }
-
-        // File:// mode: JSONP with unique callbacks
-        return new Promise((resolve, reject) => {
-            const jsFile = jsonFile.replace(/\.json$/, '_load.js');
-            const callbackName = '__examLoadCB_' + (++_fetchIdCounter) + '_' + Date.now();
-            let resolved = false;
-
-            window[callbackName] = function (examData) {
-                if (resolved) return;
-                resolved = true;
-                delete window[callbackName];
-                resolve(examData);
-            };
-
-            // Also support the legacy callback name for existing _load.js files
-            window.__examLoadCallback = function (examData) {
-                if (resolved) return;
-                resolved = true;
-                delete window[callbackName];
-                resolve(examData);
-            };
-
-            const script = document.createElement('script');
-            script.src = jsFile;
-            script.onload = () => {
-                try { document.head.removeChild(script); } catch (e) { }
-                setTimeout(() => {
-                    if (!resolved) {
-                        resolved = true;
-                        delete window[callbackName];
-                        console.warn(`Timeout loading: ${jsFile}`);
-                        resolve(null);
-                    }
-                }, 3000);
-            };
-            script.onerror = () => {
-                if (!resolved) {
-                    resolved = true;
-                    delete window[callbackName];
-                }
-                try { document.head.removeChild(script); } catch (e) { }
-                console.warn(`Failed to load script: ${jsFile}`);
-                resolve(null);
-            };
-            document.head.appendChild(script);
-        });
     }
 
     function generateMixedExamData(examsArray, totalRequested) {
-        // Collect all questions from each exam
         const pools = examsArray.map(examObj => {
             let questions = [];
             examObj.data.sections.forEach(sec => {
@@ -397,11 +406,9 @@
         const selectedQuestions = [];
         const numExams = pools.length;
 
-        // Distribution Math
         let targetPerExam = Math.floor(totalRequested / numExams);
         let remainder = totalRequested % numExams;
 
-        // Give remainder dynamically to pools that have enough questions
         let distribution = pools.map(p => targetPerExam);
         for (let i = 0; i < remainder; i++) {
             distribution[i % numExams]++;
@@ -410,24 +417,16 @@
         let qCounter = 1;
         pools.forEach((pool, index) => {
             let limit = distribution[index];
-            // Shuffle pool
             const shuffled = [...pool.questions].sort(() => 0.5 - Math.random());
-
-            // If the pool doesn't have enough, we'll take what it has.
-            // (A more advanced algorithm would re-distribute the shortfall to other pools,
-            // but for simplicity, we just take the max available)
             const taken = shuffled.slice(0, Math.min(limit, shuffled.length));
 
-            // Prefix question IDs to ensure uniqueness across different exams
             taken.forEach(q => {
-                // Standardize ID format to prevent duplicates
                 q.id = `${qCounter++}`;
                 selectedQuestions.push(q);
             });
         });
         selectedQuestions.sort(() => 0.5 - Math.random());
 
-        // Generate a concise name
         const subjectMap = [
             { id: 'TOC', keys: ['TOC', 'THEORY OF COMPUTATION', 'AUTOMATA'] },
             { id: 'OS', keys: ['OS', 'OPERATING SYSTEM', 'OPERATING SYSTEMS'] },
@@ -456,35 +455,29 @@
                 }
             }
 
-            // Fallback: use folder name from the file path
             const parts = e.file.split('/');
             if (parts.length >= 3) {
-                // Determine the subject folder (usually parts.length - 3)
                 let folder = parts[parts.length - 3];
-                // If it's too high up the tree or invalid, fallback down
                 if (!folder || folder.toLowerCase() === 'exams') folder = parts[parts.length - 2];
                 if (folder) {
-                    // Clean up folder name
                     folder = folder.replace(/[-_]/g, ' ').trim();
                     if (folder.length > 15) folder = folder.substring(0, 12) + '..';
                     return folder.toUpperCase();
                 }
             }
 
-            return 'MIX'; // absolute fallback
+            return 'MIX';
         }).slice(0, 3);
 
-        // Deduplicate
         const uniqueAbbrevs = [...new Set(abbreviations)];
         const joinStr = uniqueAbbrevs.join(' + ');
 
         const finalName = `Custom Mix: ${joinStr}${examsArray.length > 3 ? '...' : ''} (${selectedQuestions.length} Qs)`;
-        const durationMins = Math.ceil((selectedQuestions.length / 65) * 180); // ~2.7 minutes per question based on GATE
+        const durationMins = Math.ceil((selectedQuestions.length / 65) * 180);
 
-        // Construct standardized Exam Data
         return {
             title: finalName,
-            duration: durationMins || 30, // Fallback 30 min
+            duration: durationMins || 30,
             sections: [
                 {
                     name: "Mixed Section",
@@ -494,7 +487,7 @@
         };
     }
 
-    // ====== Launch Exam ======
+    // ====== Launch Exam (GitHub Pages relative logic) ======
     window.launchExam = function (el) {
         const jsonFile = el.dataset.file;
         if (!jsonFile) return;
@@ -502,59 +495,56 @@
         const btn = el.querySelector('.exam-start-btn');
         if (btn) { btn.textContent = 'Loading...'; btn.disabled = true; }
 
-        if (isHttpMode) {
-            // HTTP mode: use fetch API
-            fetch('/api/exam-data?file=' + encodeURIComponent(jsonFile))
-                .then(r => {
-                    if (!r.ok) throw new Error('Failed to load exam');
-                    return r.json();
+        if (isFileMode) {
+            // File:// mode fallback
+            const jsFile = jsonFile.replace(/\.json$/, '_load.js');
+            window.__examLoadCallback = function (examData) {
+                delete window.__examLoadCallback;
+                try {
+                    sessionStorage.setItem('retryExamData', JSON.stringify(examData));
+                    window.location.href = 'index.html';
+                } catch (e) {
+                    alert('❌ Could not store exam data: ' + e.message);
+                    if (btn) { btn.textContent = 'Start ▶'; btn.disabled = false; }
+                }
+            };
+
+            const script = document.createElement('script');
+            script.src = jsFile;
+            script.onerror = function () {
+                delete window.__examLoadCallback;
+                alert('❌ Could not load exam file.\nRun: node generate_exam_index.js');
+                if (btn) { btn.textContent = 'Start ▶'; btn.disabled = false; }
+                document.head.removeChild(script);
+            };
+            document.head.appendChild(script);
+        } else {
+            // HTTP/HTTPS Mode (GitHub Pages or Localhost)
+            // Fetch directly using the relative path!
+            fetch(jsonFile)
+                .then(async r => {
+                    if (r.ok) return r.json();
+                    
+                    if (isLocalhost) {
+                        const apiRes = await fetch('/api/exam-data?file=' + encodeURIComponent(jsonFile));
+                        if (apiRes.ok) return apiRes.json();
+                    }
+                    throw new Error('Failed to load exam file natively');
                 })
                 .then(examData => {
                     sessionStorage.setItem('retryExamData', JSON.stringify(examData));
-                    window.location.href = 'index.html';
+                    window.location.href = 'index.html'; // This is also relative and will work on GH pages!
                 })
                 .catch(e => {
                     alert('❌ Could not load exam: ' + e.message);
                     if (btn) { btn.textContent = 'Start ▶'; btn.disabled = false; }
                 });
-            return;
         }
-
-        // File:// mode: JSONP-style <script> tag loading
-        const jsFile = jsonFile.replace(/\.json$/, '_load.js');
-        window.__examLoadCallback = function (examData) {
-            delete window.__examLoadCallback;
-            try {
-                sessionStorage.setItem('retryExamData', JSON.stringify(examData));
-                window.location.href = 'index.html';
-            } catch (e) {
-                alert('❌ Could not store exam data: ' + e.message);
-                if (btn) { btn.textContent = 'Start ▶'; btn.disabled = false; }
-            }
-        };
-
-        const script = document.createElement('script');
-        script.src = jsFile;
-        script.onerror = function () {
-            delete window.__examLoadCallback;
-            alert('❌ Could not load exam file.\nRun: node server.js or node generate_exam_index.js');
-            if (btn) { btn.textContent = 'Start ▶'; btn.disabled = false; }
-            document.head.removeChild(script);
-        };
-        document.head.appendChild(script);
     };
 
-    // ====== Toggle Source Card ======
-    window.toggleSource = function (headerEl) {
-        headerEl.parentElement.classList.toggle('open');
-    };
+    window.toggleSource = function (headerEl) { headerEl.parentElement.classList.toggle('open'); };
+    window.toggleFolder = function (headerEl) { headerEl.parentElement.classList.toggle('open'); };
 
-    // ====== Toggle Folder ======
-    window.toggleFolder = function (headerEl) {
-        headerEl.parentElement.classList.toggle('open');
-    };
-
-    // ====== Filters ======
     window.setFilter = function (category, btn) {
         activeFilter = category;
         document.querySelectorAll('.lib-filter-btn').forEach(b => b.classList.remove('active'));
@@ -562,55 +552,35 @@
         render();
     };
 
-    // ====== Search ======
     if (searchInput) {
         searchInput.addEventListener('input', function () {
             searchTerm = this.value.trim().toLowerCase();
-            if (searchTerm.length === 0) {
-                render(); // Reset
-            } else {
-                applySearch();
-            }
+            if (searchTerm.length === 0) { render(); } else { applySearch(); }
         });
     }
 
     function applySearch() {
         if (!searchTerm) return;
-
         const allExams = document.querySelectorAll('.exam-item');
         const allFolders = document.querySelectorAll('.tree-folder');
         const allSources = document.querySelectorAll('.source-card');
         let matchCount = 0;
 
-        // Hide everything first
         allExams.forEach(el => el.style.display = 'none');
         allFolders.forEach(el => { el.style.display = 'none'; el.classList.remove('open'); });
         allSources.forEach(el => { el.style.display = 'none'; el.classList.remove('open'); });
 
-        // Show matching exams and their ancestors
         allExams.forEach(el => {
             const name = (el.dataset.name || '').toLowerCase();
             if (name.includes(searchTerm)) {
                 el.style.display = '';
                 matchCount++;
-
-                // Open all parent folders/sources
                 let parent = el.parentElement;
                 while (parent && parent !== contentEl) {
-                    if (parent.classList.contains('tree-folder')) {
-                        parent.style.display = '';
-                        parent.classList.add('open');
-                    }
-                    if (parent.classList.contains('source-body')) {
-                        parent.style.display = '';
-                    }
-                    if (parent.classList.contains('source-card')) {
-                        parent.style.display = '';
-                        parent.classList.add('open');
-                    }
-                    if (parent.classList.contains('folder-children')) {
-                        parent.style.display = '';
-                    }
+                    if (parent.classList.contains('tree-folder')) { parent.style.display = ''; parent.classList.add('open'); }
+                    if (parent.classList.contains('source-body')) { parent.style.display = ''; }
+                    if (parent.classList.contains('source-card')) { parent.style.display = ''; parent.classList.add('open'); }
+                    if (parent.classList.contains('folder-children')) { parent.style.display = ''; }
                     parent = parent.parentElement;
                 }
             }
@@ -619,7 +589,6 @@
         if (statsEl) statsEl.textContent = `${matchCount} result${matchCount !== 1 ? 's' : ''} found`;
     }
 
-    // ====== Helpers ======
     function countExams(items) {
         let total = 0, attempted = 0;
         if (!items) return { total, attempted };
@@ -636,9 +605,7 @@
         return { total, attempted };
     }
 
-    function updateStats(total, attempted) {
-        if (statsEl) statsEl.textContent = `${total} tests · ${attempted} attempted`;
-    }
+    function updateStats(total, attempted) { if (statsEl) statsEl.textContent = `${total} tests · ${attempted} attempted`; }
 
     function updateIndexTimestamp() {
         const tsEl = document.getElementById('indexTimestamp');
@@ -661,45 +628,23 @@
             else ageText = `${diffDays} days ago`;
             tsEl.textContent = `Index updated ${ageText}`;
             tsEl.title = `Generated: ${d.toLocaleString()}\nRun "node generate_exam_index.js" to refresh after adding/removing exams.`;
-            if (diffDays > 7) {
-                tsEl.classList.add('stale');
-            }
-        } catch (e) {
-            tsEl.textContent = '';
-        }
+            if (diffDays > 7) { tsEl.classList.add('stale'); }
+        } catch (e) { tsEl.textContent = ''; }
     }
 
-    function getCategoryIcon(cat) {
-        const icons = { pyq: '📜', test_series: '📋', subject: '📚', practice: '🔄', other: '📦' };
-        return icons[cat] || '📦';
-    }
+    function getCategoryIcon(cat) { return { pyq: '📜', test_series: '📋', subject: '📚', practice: '🔄', other: '📦' }[cat] || '📦'; }
+    function formatCategory(cat) { return { pyq: 'PYQ', test_series: 'Test Series', subject: 'Subject', practice: 'Practice', other: 'Other' }[cat] || cat; }
+    function escapeAttr(str) { return (str || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 
-    function formatCategory(cat) {
-        const names = { pyq: 'PYQ', test_series: 'Test Series', subject: 'Subject', practice: 'Practice', other: 'Other' };
-        return names[cat] || cat;
-    }
-
-    function escapeAttr(str) {
-        return (str || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    }
-
-    // ====== Scroll to Top ======
     if (scrollBtn) {
-        window.addEventListener('scroll', () => {
-            scrollBtn.classList.toggle('visible', window.scrollY > 400);
-        });
-        scrollBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+        window.addEventListener('scroll', () => { scrollBtn.classList.toggle('visible', window.scrollY > 400); });
+        scrollBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
     }
 
-    // ====== Dark Mode ======
     const darkBtn = document.getElementById('darkToggle');
     if (darkBtn) {
-        // Load saved theme
         const saved = localStorage.getItem('darkMode');
         if (saved === 'true') document.documentElement.setAttribute('data-theme', 'dark');
-
         darkBtn.addEventListener('click', () => {
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             document.documentElement.setAttribute('data-theme', isDark ? '' : 'dark');
