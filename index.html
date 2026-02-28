@@ -75,7 +75,7 @@
 
             <span style="color:#666; margin:0 10px;">|</span>
 
-            <button id="tgSetupBtn" onclick="openTgSetupModal()"
+            <button id="tgSetupBtn" onclick="handleTgBtnClick()"
                 style="background:none; border:none; color:#9b59b6; cursor:pointer; font-size:14px; text-decoration:underline; display:inline-flex; align-items:center; gap:4px;">
                 🤖 Telegram Backup
             </button>
@@ -540,6 +540,32 @@
         // ============================================
         // Telegram Setup Wizard Logic
         // ============================================
+        function handleTgBtnClick() {
+            const token = localStorage.getItem('tgBotToken');
+            const chatId = localStorage.getItem('tgChatId');
+
+            if (token && chatId) {
+                if (confirm("Click OK to Backup to Telegram now.\\nClick Cancel to change Bot Token / Chat ID settings.")) {
+                    const btn = document.getElementById('tgSetupBtn');
+                    const oldHtml = btn.innerHTML;
+                    btn.innerHTML = '⏳ Backing up...';
+
+                    const backupPromise = autoBackupToTelegram(true);
+                    if (backupPromise && backupPromise.finally) {
+                        backupPromise.finally(() => {
+                            btn.innerHTML = oldHtml;
+                        });
+                    } else {
+                        btn.innerHTML = oldHtml;
+                    }
+                } else {
+                    openTgSetupModal();
+                }
+            } else {
+                openTgSetupModal();
+            }
+        }
+
         function openTgSetupModal() {
             document.getElementById('tgInputToken').value = localStorage.getItem('tgBotToken') || '';
             document.getElementById('tgInputChatId').value = localStorage.getItem('tgChatId') || '';
@@ -678,8 +704,8 @@
 
                 const url = `https://api.telegram.org/bot${token}/sendDocument`;
 
-                // Fire and forget mostly, but catch errors
-                fetch(url, {
+                // Return promise to allow caller to track completion
+                return fetch(url, {
                     method: 'POST',
                     body: formData
                 })
