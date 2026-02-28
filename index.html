@@ -545,7 +545,7 @@
             const chatId = localStorage.getItem('tgChatId');
 
             if (token && chatId) {
-                if (confirm("Click OK to Backup to Telegram now.\\nClick Cancel to change Bot Token / Chat ID settings.")) {
+                if (confirm("Do you want to Backup to Telegram now?")) {
                     const btn = document.getElementById('tgSetupBtn');
                     const oldHtml = btn.innerHTML;
                     btn.innerHTML = '⏳ Backing up...';
@@ -558,8 +558,6 @@
                     } else {
                         btn.innerHTML = oldHtml;
                     }
-                } else {
-                    openTgSetupModal();
                 }
             } else {
                 openTgSetupModal();
@@ -716,12 +714,20 @@
                             if (force) alert("Backup successfully sent to Telegram!");
                         } else {
                             console.error("Telegram API Error:", data);
-                            if (force) alert("Failed to send backup to Telegram: " + data.description);
+                            if (force) {
+                                if (confirm("Failed to send backup to Telegram: " + data.description + "\\n\\nWould you like to edit your Bot Token and Channel ID?")) {
+                                    openTgSetupModal();
+                                }
+                            }
                         }
                     })
                     .catch(err => {
                         console.error("Fetch Error:", err);
-                        if (force) alert("Network error while sending backup to Telegram.");
+                        if (force) {
+                            if (confirm("Network error while sending backup to Telegram.\\n\\nWould you like to edit your Bot Token and Channel ID?")) {
+                                openTgSetupModal();
+                            }
+                        }
                     })
                     .finally(() => {
                         isBackingUp = false;
