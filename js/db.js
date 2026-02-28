@@ -734,42 +734,47 @@ function formatStorageSize(bytes) {
     return (bytes / (1024 * 1024 * 1024)).toFixed(2) + ' GB';
 }
 
+// Get a Promise returning the Blob of the entire DB
+async function generateBackupBlob() {
+    const db = await initDB();
+    const stores = ['exams', 'exam_details', 'bookmarks', 'silly_mistakes', 'todos'];
+    const chunks = ['{'];
+
+    for (let i = 0; i < stores.length; i++) {
+        const storeName = stores[i];
+        if (i > 0) chunks.push(',');
+        chunks.push(`"${storeName}":[`);
+
+        // Stream records via cursor in batches
+        const records = await new Promise((resolve, reject) => {
+            const tx = db.transaction([storeName], 'readonly');
+            const store = tx.objectStore(storeName);
+            const request = store.getAll();
+            request.onsuccess = () => resolve(request.result || []);
+            request.onerror = () => reject(request.error);
+        });
+
+        // Serialize in batches of 200 to avoid huge string concat
+        const BATCH = 200;
+        for (let j = 0; j < records.length; j += BATCH) {
+            const batch = records.slice(j, j + BATCH);
+            const batchStr = batch.map(r => JSON.stringify(r)).join(',');
+            if (j > 0) chunks.push(',');
+            chunks.push(batchStr);
+        }
+
+        chunks.push(']');
+    }
+
+    chunks.push('}');
+
+    return new Blob(chunks, { type: 'application/json' });
+}
+
 // Build and trigger download of Backup (chunked streaming to avoid OOM)
 async function downloadBackup() {
     try {
-        const db = await initDB();
-        const stores = ['exams', 'exam_details', 'bookmarks', 'silly_mistakes', 'todos'];
-        const chunks = ['{'];
-
-        for (let i = 0; i < stores.length; i++) {
-            const storeName = stores[i];
-            if (i > 0) chunks.push(',');
-            chunks.push(`"${storeName}":[`);
-
-            // Stream records via cursor in batches
-            const records = await new Promise((resolve, reject) => {
-                const tx = db.transaction([storeName], 'readonly');
-                const store = tx.objectStore(storeName);
-                const request = store.getAll();
-                request.onsuccess = () => resolve(request.result || []);
-                request.onerror = () => reject(request.error);
-            });
-
-            // Serialize in batches of 200 to avoid huge string concat
-            const BATCH = 200;
-            for (let j = 0; j < records.length; j += BATCH) {
-                const batch = records.slice(j, j + BATCH);
-                const batchStr = batch.map(r => JSON.stringify(r)).join(',');
-                if (j > 0) chunks.push(',');
-                chunks.push(batchStr);
-            }
-
-            chunks.push(']');
-        }
-
-        chunks.push('}');
-
-        const blob = new Blob(chunks, { type: 'application/json' });
+        const blob = await generateBackupBlob();
 
         // Generate dynamic file name with date
         const dateStr = new Date().toISOString().split('T')[0];

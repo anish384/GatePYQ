@@ -75,6 +75,20 @@
 
             <span style="color:#666; margin:0 10px;">|</span>
 
+            <button id="tgSetupBtn" onclick="openTgSetupModal()"
+                style="background:none; border:none; color:#9b59b6; cursor:pointer; font-size:14px; text-decoration:underline; display:inline-flex; align-items:center; gap:4px;">
+                🤖 Telegram Backup
+            </button>
+
+            <span style="color:#666; margin:0 10px;">|</span>
+
+            <span id="storageUsageContainer"
+                style="font-size:14px; color:#666; display:inline-flex; align-items:center; gap:4px;">
+                💾 <span id="storageUsageValue">Loading...</span>
+            </span>
+
+            <span style="color:#666; margin:0 10px;">|</span>
+
             <a href="support.html"
                 style="background:none; border:none; color:#f39c12; cursor:pointer; font-size:14px; text-decoration:underline; display:inline-block;">☕
                 Buy me a coffee</a>
@@ -399,6 +413,82 @@
         </div>
     </div>
 
+    <!-- Telegram Setup Wizard Modal -->
+    <div id="tgSetupModal" class="modal">
+        <div class="modal-content" style="max-width: 500px; text-align: left;">
+            <div class="modal-header" style="justify-content: space-between; display: flex;">
+                Telegram Auto-Backup Setup
+                <button onclick="closeTgSetupModal()"
+                    style="background: none; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+            </div>
+
+            <div id="tgStep1" class="tg-step">
+                <h3 style="margin-top:0;">Step 1: Get Bot Token</h3>
+                <p>1. Open Telegram and search for <strong>@BotFather</strong>.</p>
+                <p>2. Send <code>/newbot</code> and follow instructions to create a bot.</p>
+                <p>3. Copy the HTTP API Token provided.</p>
+                <div style="margin-top: 15px;">
+                    <label style="display:block; margin-bottom: 5px; font-weight: bold;">Bot Token:</label>
+                    <input type="text" id="tgInputToken" placeholder="e.g. 1234567890:ABCdefGHIjklMNOpqrsTUVwxyz"
+                        style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace;">
+                </div>
+                <div class="modal-buttons" style="margin-top: 20px;">
+                    <button class="btn btn-confirm" onclick="nextTgStep(2)">Next Step</button>
+                </div>
+            </div>
+
+            <div id="tgStep2" class="tg-step" style="display: none;">
+                <h3 style="margin-top:0;">Step 2: Create a Private Channel</h3>
+                <p>1. In Telegram, create a new <strong>Channel</strong>.</p>
+                <p>2. Set the channel type to <strong>Private</strong>.</p>
+                <p>3. Add your newly created bot to the channel as an <strong>Administrator</strong> (it needs
+                    permission to Post Messages).</p>
+                <div class="modal-buttons" style="margin-top: 20px;">
+                    <button class="btn btn-cancel" onclick="nextTgStep(1)">Back</button>
+                    <button class="btn btn-confirm" onclick="nextTgStep(3)">Next Step</button>
+                </div>
+            </div>
+
+            <div id="tgStep3" class="tg-step" style="display: none;">
+                <h3 style="margin-top:0;">Step 3: Get Channel ID</h3>
+                <p>1. Open <a href="https://web.telegram.org/" target="_blank" style="color: #3498db;">Telegram Web</a>
+                    in your browser and log in.</p>
+                <p>2. Open the Private Channel you just created.</p>
+                <p>3. Look at the URL in your browser. It will look something like
+                    this:<br><code>https://web.telegram.org/a/#-1001234567890</code> or <code>.../#1234567890</code></p>
+                <p>4. Extract the number part: <strong>1234567890</strong>.</p>
+                <div style="margin-top: 15px;">
+                    <label style="display:block; margin-bottom: 5px; font-weight: bold;">Channel ID:</label>
+                    <input type="text" id="tgInputChatId" placeholder="e.g. 1234567890 or -1001234567890"
+                        style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace;">
+                </div>
+                <div class="modal-buttons" style="margin-top: 20px;">
+                    <button class="btn btn-cancel" onclick="nextTgStep(2)">Back</button>
+                    <button class="btn btn-confirm" onclick="nextTgStep(4)">Next Step</button>
+                </div>
+            </div>
+
+            <div id="tgStep4" class="tg-step" style="display: none;">
+                <h3 style="margin-top:0;">Step 4: Final Verification</h3>
+                <p>Please confirm your details. We will automatically add the required <code>-100</code> prefix to the
+                    Channel ID if it's missing.</p>
+                <div
+                    style="background: var(--card-bg, #f9f9f9); padding: 10px; border-radius: 4px; margin-top: 10px; border: 1px solid #ddd;">
+                    <strong>Token:</strong> <span id="tgVerifyToken"
+                        style="font-family: monospace; word-break: break-all;"></span><br><br>
+                    <strong>Channel ID:</strong> <span id="tgVerifyChatId" style="font-family: monospace;"></span>
+                </div>
+                <p style="font-size: 13px; color: #666; margin-top: 15px;">Note: These credentials will be stored
+                    locally in your browser.</p>
+                <div class="modal-buttons" style="margin-top: 20px;">
+                    <button class="btn btn-cancel" onclick="nextTgStep(3)">Back</button>
+                    <button class="btn btn-confirm" onclick="saveTgSetup()">Save & Enable Backup</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <script>
         async function handleExportData() {
             if (confirm("This will download a full backup of all your exams, bookmarks, and silly mistakes. Proceed?")) {
@@ -446,6 +536,63 @@
                 }, 2000);
             });
         }
+
+        // ============================================
+        // Telegram Setup Wizard Logic
+        // ============================================
+        function openTgSetupModal() {
+            document.getElementById('tgInputToken').value = localStorage.getItem('tgBotToken') || '';
+            document.getElementById('tgInputChatId').value = localStorage.getItem('tgChatId') || '';
+
+            document.getElementById('tgSetupModal').classList.add('active');
+            nextTgStep(1);
+        }
+
+        function closeTgSetupModal() {
+            document.getElementById('tgSetupModal').classList.remove('active');
+        }
+
+        function nextTgStep(stepNum) {
+            if (stepNum === 2) {
+                const token = document.getElementById('tgInputToken').value.trim();
+                if (!token) {
+                    alert("Please enter your bot token to proceed.");
+                    return;
+                }
+            } else if (stepNum === 4) {
+                const chatIdRaw = document.getElementById('tgInputChatId').value.trim();
+                if (!chatIdRaw) {
+                    alert("Please enter your Channel ID to proceed.");
+                    return;
+                }
+
+                // Format chat ID
+                let formattedChatId = chatIdRaw;
+                // If it's a positive number or doesn't start with -100, we probably need to prepend -100 for Telegram Channels
+                if (!formattedChatId.startsWith('-100') && !formattedChatId.startsWith('@')) {
+                    // Remove any existing minus sign just in case
+                    formattedChatId = '-100' + formattedChatId.replace(/^-/, '');
+                }
+
+                document.getElementById('tgVerifyToken').textContent = document.getElementById('tgInputToken').value.trim();
+                document.getElementById('tgVerifyChatId').textContent = formattedChatId;
+            }
+
+            document.querySelectorAll('.tg-step').forEach(el => el.style.display = 'none');
+            document.getElementById('tgStep' + stepNum).style.display = 'block';
+        }
+
+        function saveTgSetup() {
+            const token = document.getElementById('tgInputToken').value.trim();
+            let chatId = document.getElementById('tgVerifyChatId').textContent;
+
+            localStorage.setItem('tgBotToken', token);
+            localStorage.setItem('tgChatId', chatId);
+
+            closeTgSetupModal();
+            alert("Telegram settings saved successfully! We will attempt a backup now.");
+            autoBackupToTelegram(true); // Force backup attempt
+        }
     </script>
 
     <script src="js/db.js"></script>
@@ -454,18 +601,15 @@
         // Load test history on page load
         (async function () {
             try {
+                // Security cleanup: Remove hardcoded token if present from previous versions
+                if (localStorage.getItem('tgBotToken') === '8710067572:AAEu-qO_BjWw-8ZHP_uJN-LbPwc4oWQFpY0') {
+                    localStorage.removeItem('tgBotToken');
+                    localStorage.removeItem('tgChatId');
+                }
+
                 await initDB();
                 loadHistory();
                 initHomeFeatures();
-
-                // Initialize Telegram credentials safely over here
-                if (!localStorage.getItem('tgBotToken')) {
-                    localStorage.setItem('tgBotToken', '8710067572:AAEu-qO_BjWw-8ZHP_uJN-LbPwc4oWQFpY0');
-                }
-                if (!localStorage.getItem('tgChatId')) {
-                    // API chat IDs for channels generally require the -100 prefix
-                    localStorage.setItem('tgChatId', '-1003885215959');
-                }
 
                 // Trigger auto-backup check
                 autoBackupToTelegram();
@@ -491,6 +635,76 @@
                 }
             } catch (e) {
                 console.warn('Could not load storage usage:', e);
+            }
+        }
+
+        // ============================================
+        // Auto-Backup to Telegram
+        // ============================================
+        let isBackingUp = false;
+        async function autoBackupToTelegram(force = false) {
+            if (isBackingUp) return;
+
+            const token = localStorage.getItem('tgBotToken');
+            const chatId = localStorage.getItem('tgChatId');
+
+            // Only proceed if setup is complete
+            if (!token || !chatId) {
+                if (force) alert("Please complete the Telegram Backup Setup first.");
+                return;
+            }
+
+            const lastBackupStr = localStorage.getItem('lastTgBackupTime');
+            const now = Date.now();
+
+            // Auto backup once every 24 hours unless forced
+            const ONE_DAY = 24 * 60 * 60 * 1000;
+            if (!force && lastBackupStr && (now - parseInt(lastBackupStr)) < ONE_DAY) {
+                return;
+            }
+
+            try {
+                isBackingUp = true;
+
+                const blob = await generateBackupBlob();
+                const dateStr = new Date().toISOString().split('T')[0];
+                const fileName = `GATE_Exam_Backup_${dateStr}.json`;
+                const file = new File([blob], fileName, { type: 'application/json' });
+
+                const formData = new FormData();
+                formData.append('chat_id', chatId);
+                formData.append('document', file);
+                formData.append('caption', `📦 GATE Prep DB Backup\n📅 ${new Date().toLocaleString()}`);
+
+                const url = `https://api.telegram.org/bot${token}/sendDocument`;
+
+                // Fire and forget mostly, but catch errors
+                fetch(url, {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.ok) {
+                            localStorage.setItem('lastTgBackupTime', now.toString());
+                            if (force) alert("Backup successfully sent to Telegram!");
+                        } else {
+                            console.error("Telegram API Error:", data);
+                            if (force) alert("Failed to send backup to Telegram: " + data.description);
+                        }
+                    })
+                    .catch(err => {
+                        console.error("Fetch Error:", err);
+                        if (force) alert("Network error while sending backup to Telegram.");
+                    })
+                    .finally(() => {
+                        isBackingUp = false;
+                    });
+
+            } catch (e) {
+                console.error("Error generating backup for Telegram:", e);
+                isBackingUp = false;
+                if (force) alert("Error generating backup file.");
             }
         }
 

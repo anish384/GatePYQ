@@ -19,20 +19,22 @@ document.addEventListener('DOMContentLoaded', async () => {
             await saveExamResult(summary, details);
 
             // --- Update Daily Streak Logic ---
-            const today = new Date().toISOString().split('T')[0];
+            const d = new Date();
+            const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+
             const lastExamDate = localStorage.getItem('lastExamDate');
             let currentStreak = parseInt(localStorage.getItem('dailyStreakCount') || '0');
 
             if (lastExamDate !== today) {
                 if (lastExamDate) {
-                    const lastDate = new Date(lastExamDate);
-                    const todayDate = new Date(today);
-                    const diffTime = Math.abs(todayDate - lastDate);
-                    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                    // Calculate yesterday's date string in local time format for exact match comparison
+                    const y = new Date(d);
+                    y.setDate(y.getDate() - 1);
+                    const yesterday = `${y.getFullYear()}-${String(y.getMonth() + 1).padStart(2, '0')}-${String(y.getDate()).padStart(2, '0')}`;
 
-                    if (diffDays === 1) {
+                    if (lastExamDate === yesterday) {
                         currentStreak++; // Consecutive day
-                    } else if (diffDays > 1) {
+                    } else {
                         currentStreak = 1; // Streak broken, restart
                     }
                 } else {
