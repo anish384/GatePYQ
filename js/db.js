@@ -524,7 +524,7 @@ async function clearAllSillyMistakes() {
 // =====================================================
 
 // Save a new to-do
-async function saveTodoToDB(text, targetDateStr) {
+async function saveTodoToDB(text, targetDateStr, type) {
     const db = await initDB();
 
     return new Promise((resolve, reject) => {
@@ -535,6 +535,7 @@ async function saveTodoToDB(text, targetDateStr) {
         const obj = {
             text: text,
             completed: false,
+            type: type || 'todo', // 'todo' or 'note'
             targetDate: targetDateStr, // Used for displaying on specific days
             dateCreated: new Date().toISOString()
         };
@@ -627,6 +628,30 @@ async function removeTodoFromDB(id) {
 
         transaction.oncomplete = () => resolve();
         transaction.onerror = () => reject(transaction.error);
+    });
+}
+
+// Update the text of a to-do by id
+async function updateTodoTextInDB(id, newText) {
+    const db = await initDB();
+
+    return new Promise((resolve, reject) => {
+        const transaction = db.transaction(['todos'], 'readwrite');
+        const store = transaction.objectStore('todos');
+        const request = store.get(id);
+
+        request.onsuccess = () => {
+            const data = request.result;
+            if (data) {
+                data.text = newText;
+                const updateReq = store.put(data);
+                updateReq.onsuccess = () => resolve(true);
+                updateReq.onerror = () => reject(updateReq.error);
+            } else {
+                resolve(false);
+            }
+        };
+        request.onerror = () => reject(request.error);
     });
 }
 

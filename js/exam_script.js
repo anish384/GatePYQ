@@ -148,21 +148,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Check for retry exam data (from "Retry Mistakes" on result page)
+    // Check for retry exam data (from "Retry Mistakes" on result page or Exam Library)
     const retryData = sessionStorage.getItem('retryExamData');
+    const shouldAutoStart = sessionStorage.getItem('triggerAutoStart');
     if (retryData) {
         try {
             examData = JSON.parse(retryData);
             sessionStorage.removeItem('retryExamData'); // Clear so it doesn't auto-load again
+            sessionStorage.removeItem('triggerAutoStart');
             shuffleExamData(); // Shuffle on retry!
             initializeQuestionStates();
 
-            // Allow user to start it manually so we capture the UI gesture for Fullscreen API
-            document.getElementById('startExam').disabled = false;
-            document.getElementById('fileName').textContent = examData.title;
+            if (shouldAutoStart === 'true') {
+                // Immediately start the exam (from Exam Library or multi-select)
+                if (window.enterFullScreen) window.enterFullScreen();
+                toggleHomeView(false);
+                document.getElementById('examSection').style.display = 'flex';
+                startExam();
+            } else {
+                // Allow user to start it manually
+                document.getElementById('startExam').disabled = false;
+                document.getElementById('fileName').textContent = examData.title;
+            }
         } catch (e) {
             console.warn('Could not load retry exam data:', e);
             sessionStorage.removeItem('retryExamData');
+            sessionStorage.removeItem('triggerAutoStart');
         }
     }
 

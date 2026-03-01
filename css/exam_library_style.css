@@ -35,13 +35,16 @@
     --exam-hover: rgba(93, 173, 226, 0.08);
 }
 
-* {
+/* Scope resets to library containers only (avoid interfering when embedded) */
+.lib-content *,
+.lib-controls *,
+.lib-fab *,
+.embedded-exam-library * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
-body {
+/* Only apply these body styles on standalone exam_library.html page */
+body:has(> .lib-header) {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     background: var(--bg);
     color: var(--text);
@@ -689,4 +692,41 @@ body {
 .lib-index-ts.stale {
     color: #e67e22;
     font-weight: 600;
+}
+
+/* ===== Embedded Library Overrides (when inside index.html) ===== */
+.embedded-exam-library .lib-content {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.embedded-exam-library .lib-controls {
+    max-width: 100%;
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+.embedded-exam-library .source-card {
+    margin-bottom: 12px;
+}
+
+.embedded-exam-library .lib-search {
+    min-width: unset;
+    font-size: 13px;
+    padding: 8px 14px 8px 36px;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .embedded-exam-library .lib-controls {
+        flex-direction: column;
+    }
+
+    .embedded-exam-library .lib-fab {
+        padding: 10px 15px;
+        border-radius: 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 }

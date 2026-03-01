@@ -2,20 +2,24 @@
 <html lang="en">
 
 <head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BE2XSPT5W9"></script>
-	<script>
-  		window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
- 		 gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BE2XSPT5W9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  		gtag('config', 'G-BE2XSPT5W9');
-	</script>
+        gtag('config', 'G-BE2XSPT5W9');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/logo_iit_madras_without_background.png" type="image/x-icon">
     <title>GATE Exam Interface</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/exam_style.css">
+    <link rel="stylesheet" href="css/exam_library_style.css">
     <!-- <script>
         window.MathJax = {
             tex: {
@@ -47,61 +51,30 @@
 <body>
     <!-- Upload Section -->
     <div id="uploadSection" class="upload-section">
-        <div class="bookmarks-quick-link" style="text-align:center; margin-top:15px;">
-            <a href="analytics.html"
-                style="color:#3498db; font-weight:600; font-size:15px; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
-                📊 Analytics Dashboard
-            </a>
-            <span style="color:#666; margin:0 10px;">|</span>
-            <a href="bookmarks.html"
-                style="color:#1abc9c; font-weight:600; font-size:15px; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
-                📌 Bookmarks
-            </a>
-            <span style="color:#666; margin:0 10px;">|</span>
-            <a href="silly_mistakes.html"
-                style="color:#e67e22; font-weight:600; font-size:15px; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
-                🤦 Silly Mistakes
-            </a>
-            <span style="color:#666; margin:0 10px;">|</span>
-            <a href="exam_library.html"
-                style="color:#8e44ad; font-weight:600; font-size:15px; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
-                📚 Exam Library
-            </a>
-        </div>
+        <!-- Cohesive Home Header -->
+        <header class="home-header">
+            <nav class="nav-pills">
+                <a href="analytics.html" class="nav-pill nav-pill--blue">📊 Analytics</a>
+                <a href="bookmarks.html" class="nav-pill nav-pill--teal">📌 Bookmarks</a>
+                <a href="silly_mistakes.html" class="nav-pill nav-pill--orange">🤦 Silly Mistakes</a>
+            </nav>
 
-        <div class="data-management" style="text-align:center; margin-top:10px; margin-bottom: 15px;">
-            <button id="exportDataBtn" onclick="handleExportData()"
-                style="background:none; border:none; color:#3498db; cursor:pointer; font-size:14px; text-decoration:underline;">📥
-                Backup All Data</button>
+            <div class="utility-actions">
+                <button id="exportDataBtn" class="util-btn util-btn--blue" onclick="handleExportData()"
+                    title="Backup All Data">📥 Backup</button>
+                <button id="importDataBtn" class="util-btn util-btn--red"
+                    onclick="document.getElementById('importFileInput').click()" title="Restore Data">📤
+                    Restore</button>
+                <input type="file" id="importFileInput" style="display:none;" accept=".json"
+                    onchange="handleImportData(event)">
+                <button id="tgSetupBtn" class="util-btn util-btn--purple" onclick="handleTgBtnClick()"
+                    title="Telegram Backup">🤖 Telegram</button>
+                <span id="storageUsageContainer" class="util-badge">💾 <span
+                        id="storageUsageValue">Loading...</span></span>
+                <a href="support.html" class="util-btn util-btn--gold" title="Buy me a coffee">☕ Support</a>
+            </div>
+        </header>
 
-            <span style="color:#666; margin:0 10px;">|</span>
-
-            <button id="importDataBtn" onclick="document.getElementById('importFileInput').click()"
-                style="background:none; border:none; color:#e74c3c; cursor:pointer; font-size:14px; text-decoration:underline;">📤
-                Restore Data</button>
-            <input type="file" id="importFileInput" style="display:none;" accept=".json"
-                onchange="handleImportData(event)">
-
-            <span style="color:#666; margin:0 10px;">|</span>
-
-            <button id="tgSetupBtn" onclick="handleTgBtnClick()"
-                style="background:none; border:none; color:#9b59b6; cursor:pointer; font-size:14px; text-decoration:underline; display:inline-flex; align-items:center; gap:4px;">
-                🤖 Telegram Backup
-            </button>
-
-            <span style="color:#666; margin:0 10px;">|</span>
-
-            <span id="storageUsageContainer"
-                style="font-size:14px; color:#666; display:inline-flex; align-items:center; gap:4px;">
-                💾 <span id="storageUsageValue">Loading...</span>
-            </span>
-
-            <span style="color:#666; margin:0 10px;">|</span>
-
-            <a href="support.html"
-                style="background:none; border:none; color:#f39c12; cursor:pointer; font-size:14px; text-decoration:underline; display:inline-block;">☕
-                Buy me a coffee</a>
-        </div>
         <button class="dark-mode-toggle standalone" id="uploadDarkToggle" title="Toggle Dark Mode">
             <span class="icon-moon">🌙</span>
             <span class="icon-sun">☀️</span>
@@ -109,83 +82,105 @@
         <div class="home-layout-container">
             <!-- Left Sidebar -->
             <div class="home-sidebar">
-                <div class="streak-tracker stat-card"
-                    style="background: rgba(26, 188, 156, 0.1); border: 1px solid rgba(26, 188, 156, 0.3); padding: 18px 15px; border-radius: 8px; text-align: center; margin-bottom: 20px;">
-                    <div
-                        style="font-size: 13px; color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
-                        🔥 Daily Streak</div>
-                    <div style="font-size: 24px; font-weight: bold; color: #1abc9c; margin-top: 5px;"
-                        id="streakCountDisplay">0 Days</div>
+                <div class="streak-tracker stat-card">
+                    <div class="stat-card__label">🔥 Daily Streak</div>
+                    <div class="stat-card__value stat-card__value--green" id="streakCountDisplay">0 Days</div>
                     <div id="streakCalendarContainer"></div>
                 </div>
 
+                <!-- Daily Notes / To-Do Panel -->
+                <div class="todo-panel">
+                    <div class="todo-panel__header">
+                        <div class="stat-card__label stat-card__label--purple" id="todoHeaderLabel">📝 Daily Notes</div>
+                    </div>
+                    <div class="todo-mode-toggle">
+                        <button class="todo-mode-btn active" id="modeTodoBtn" onclick="switchTodoMode('todo')">☑️
+                            To-Do</button>
+                        <button class="todo-mode-btn" id="modeNoteBtn" onclick="switchTodoMode('note')">📋
+                            Notes</button>
+                    </div>
+                    <div class="todo-input-row">
+                        <input type="text" id="todoInput" class="todo-input-field" placeholder="Add a to-do...">
+                        <button id="addTodoBtn" class="todo-add-btn">+</button>
+                    </div>
+                    <ul id="todoList" class="todo-list-inline"></ul>
+                </div>
             </div>
 
-            <!-- Main Content -->
+            <!-- Center Main Content -->
             <div class="home-main-content">
                 <div class="upload-card">
                     <h1 class="upload-title">GATE Exam Interface</h1>
-                    <p class="upload-subtitle">Upload your exam JSON file to begin</p>
+                    <p class="upload-subtitle">Browse and start any exam from the library below</p>
 
-                    <div class="file-input-wrapper">
-                        <input type="file" id="fileInput" class="file-input" accept=".json">
-                        <label for="fileInput" class="file-label">Choose JSON File</label>
-                        <div id="fileName" class="file-name">No file selected</div>
+                    <div id="unfinishedExamActions" class="unfinished-actions"
+                        style="display:none; margin-bottom: 20px;">
+                        <p class="unfinished-text">You have an unfinished exam in progress.</p>
+                        <div class="unfinished-btns">
+                            <button id="resumeExam" class="btn-resume">Resume Exam</button>
+                            <button id="discardExam" class="btn-discard">Discard &amp; Start New</button>
+                        </div>
                     </div>
 
-                    <button id="startExam" class="btn-start" disabled>Start Exam</button>
+                    <!-- Embedded Exam Library Section -->
+                    <div class="embedded-exam-library">
+                        <div class="lib-controls" style="padding: 0; margin: 0 0 15px 0;">
+                            <input type="text" id="libSearch" class="lib-search" placeholder="Search exams by name..."
+                                style="min-width: unset;">
+                            <button class="lib-filter-btn" id="multiSelectToggle" onclick="toggleMultiSelect()"
+                                style="margin-left: auto; background-color: rgba(155, 89, 182, 0.2); border-color: #9b59b6; color: #fff;">✨
+                                Multi-Select Exam</button>
+                            <span class="lib-stats" id="libStats">Loading...</span>
+                        </div>
 
-                    <!-- Custom Exam Builder Div -->
-                    <div class="custom-exam-builder"
-                        style="margin-top: 30px; padding-top: 25px; border-top: 1px dashed rgba(0,0,0,0.1);">
-                        <h3 style="margin-top: 0; margin-bottom: 5px; font-size: 18px; color: var(--text-color);">🛠️
-                            Custom Practice Exam</h3>
-                        <p style="font-size: 13px; color: #888; margin-bottom: 15px;">Generate a mixed exam from your
-                            saved questions.</p>
+                        <div class="lib-content" id="libContent" style="margin: 0; padding: 0;">
+                            <div class="lib-loading">
+                                <div class="spinner"></div><br>
+                                Loading exam library...
+                            </div>
+                        </div>
+                    </div>
 
-                        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
-                            <div style="flex: 1; text-align: left;">
-                                <label
-                                    style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 5px; color: var(--text-color);">From
-                                    Bookmarks 📌</label>
+                    <!-- Custom Exam Builder -->
+                    <div class="custom-exam-builder">
+                        <h3 class="section-heading">🛠️ Custom Practice Exam</h3>
+                        <p class="section-desc">Generate a mixed exam from your saved questions.</p>
+                        <div class="custom-inputs-row">
+                            <div class="custom-input-group">
+                                <label class="custom-input-label">From Bookmarks 📌</label>
                                 <input type="number" id="customBkqInput" min="0" max="50" value="5"
                                     class="custom-num-input">
                                 <small class="avail-text" id="availBkq">Avail: 0</small>
                             </div>
-                            <div style="flex: 1; text-align: left;">
-                                <label
-                                    style="display: block; font-size: 13px; font-weight: bold; margin-bottom: 5px; color: var(--text-color);">From
-                                    Mistakes 🤦</label>
+                            <div class="custom-input-group">
+                                <label class="custom-input-label">From Mistakes 🤦</label>
                                 <input type="number" id="customSmInput" min="0" max="50" value="5"
                                     class="custom-num-input">
                                 <small class="avail-text" id="availSm">Avail: 0</small>
                             </div>
                         </div>
-
-                        <button id="startCustomExamBtn" class="btn-start custom-exam-btn">
-                            Start Custom Exam ✨
-                        </button>
+                        <button id="startCustomExamBtn" class="btn-start custom-exam-btn">Start Custom Exam ✨</button>
                     </div>
 
-                    <div id="unfinishedExamActions" class="unfinished-actions" style="display:none; margin-top: 20px;">
-                        <p class="unfinished-text">You have an unfinished exam in progress.</p>
-                        <div class="unfinished-btns">
-                            <button id="resumeExam" class="btn-resume">Resume Exam</button>
-                            <button id="discardExam" class="btn-discard">Discard & Start New</button>
+                    <!-- Upload Custom JSON -->
+                    <div class="custom-exam-builder custom-exam-builder--centered">
+                        <h3 class="section-heading">📄 Upload Custom JSON</h3>
+                        <p class="section-desc">Have your own exam file? Upload it here.</p>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="fileInput" class="file-input" accept=".json">
+                            <label for="fileInput" class="file-label">Choose JSON File</label>
+                            <div id="fileName" class="file-name">No file selected</div>
                         </div>
+                        <button id="startExam" class="btn-start" disabled>Start Exam</button>
                     </div>
                 </div>
             </div>
 
             <!-- Right Sidebar -->
             <div class="home-sidebar">
-                <div class="gate-countdown stat-card"
-                    style="background: rgba(52, 152, 219, 0.1); border: 1px solid rgba(52, 152, 219, 0.3); padding: 18px 15px; border-radius: 8px; text-align: center;">
-                    <div
-                        style="font-size: 13px; color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
-                        ⏳ GATE 2027 In</div>
-                    <div style="font-size: 20px; font-weight: bold; color: #3498db; margin-top: 5px; margin-bottom: 10px; font-variant-numeric: tabular-nums;"
-                        id="gateCountdownDisplay">Loading...</div>
+                <div class="gate-countdown stat-card">
+                    <div class="stat-card__label">⏳ GATE 2027 In</div>
+                    <div class="stat-card__value stat-card__value--blue" id="gateCountdownDisplay">Loading...</div>
                     <div id="gateCalendarContainer"></div>
                 </div>
             </div>
@@ -229,6 +224,24 @@
                 </table>
             </div>
         </div>
+
+        <!-- Floating Action Bar for Multi-Select -->
+        <div class="lib-fab" id="multiSelectFab" style="display: none;">
+            <div class="fab-info">
+                <span id="fabSelectedCount">0 exams selected</span>
+            </div>
+            <div class="fab-controls">
+                <label for="fabTotalQuestions" style="font-size: 14px; font-weight: bold; margin-right: 8px;">Total
+                    Questions:</label>
+                <input type="number" id="fabTotalQuestions" min="1" max="200" value="30" class="fab-input">
+                <small id="fabAvailableCount"
+                    style="margin-left: 8px; color: var(--text-secondary); font-size: 12px; display: none;">(Max:
+                    0)</small>
+            </div>
+            <button class="fab-generate-btn" id="fabGenerateBtn" onclick="generateCustomExam()">Generate &amp; Start
+                ▶</button>
+        </div>
+
     </div> <!-- End of uploadSection -->
 
     <!-- Exam Section -->
@@ -460,11 +473,13 @@
 
             <div id="tgStep3" class="tg-step" style="display: none;">
                 <h3 style="margin-top:0;">Step 3: Get Channel ID</h3>
-                <p>1. Open <a href="https://web.telegram.org/" target="_blank" style="color: #3498db;">Telegram Web</a>
+                <p>1. Open <a href="https://web.telegram.org/" target="_blank" style="color: #3498db;">Telegram
+                        Web</a>
                     in your browser and log in.</p>
                 <p>2. Open the Private Channel you just created.</p>
                 <p>3. Look at the URL in your browser. It will look something like
-                    this:<br><code>https://web.telegram.org/a/#-1001234567890</code> or <code>.../#1234567890</code></p>
+                    this:<br><code>https://web.telegram.org/a/#-1001234567890</code> or <code>.../#1234567890</code>
+                </p>
                 <p>4. Extract the number part: <strong>1234567890</strong>.</p>
                 <div style="margin-top: 15px;">
                     <label style="display:block; margin-bottom: 5px; font-weight: bold;">Channel ID:</label>
@@ -479,7 +494,8 @@
 
             <div id="tgStep4" class="tg-step" style="display: none;">
                 <h3 style="margin-top:0;">Step 4: Final Verification</h3>
-                <p>Please confirm your details. We will automatically add the required <code>-100</code> prefix to the
+                <p>Please confirm your details. We will automatically add the required <code>-100</code> prefix to
+                    the
                     Channel ID if it's missing.</p>
                 <div
                     style="background: var(--card-bg, #f9f9f9); padding: 10px; border-radius: 4px; margin-top: 10px; border: 1px solid #ddd;">
@@ -630,6 +646,8 @@
 
     <script src="js/db.js"></script>
     <script src="js/exam_script.js"></script>
+    <script src="exam_index.js"></script>
+    <script src="js/exam_library_script.js"></script>
     <script>
         // Load test history on page load
         (async function () {
@@ -760,6 +778,18 @@
         // Defaults to today's date in YYYY-MM-DD format
         let currentTodoDate = `${new Date().getFullYear()}-${String(new Date().getMonth() + 1).padStart(2, '0')}-${String(new Date().getDate()).padStart(2, '0')}`;
 
+        // Current mode: 'todo' or 'note'
+        let currentTodoMode = 'todo';
+
+        // Switch between To-Do and Notes mode
+        window.switchTodoMode = function (mode) {
+            currentTodoMode = mode;
+            document.getElementById('modeTodoBtn').classList.toggle('active', mode === 'todo');
+            document.getElementById('modeNoteBtn').classList.toggle('active', mode === 'note');
+            document.getElementById('todoInput').placeholder = mode === 'todo' ? 'Add a to-do...' : 'Add a note...';
+            renderTodoList(); // re-render to show only items of this type
+        };
+
         // Initialize To-Dos
         async function initTodos() {
             try {
@@ -789,7 +819,7 @@
             if (dateStr === todayStr) {
                 headerLabel.textContent = "📝 Daily Notes";
             } else {
-                headerLabel.textContent = `📝 Notes: ${displayTitle}`;
+                headerLabel.textContent = `📝 ${displayTitle}`;
             }
 
             // Animate refresh
@@ -806,25 +836,50 @@
             if (!listEl) return;
 
             try {
-                // Now fetching strictly by target date
-                const todos = await getTodosByDate(currentTodoDate);
+                const allItems = await getTodosByDate(currentTodoDate);
+                // Filter by active mode: show only items matching the current tab
+                const todos = allItems.filter(t => (t.type || 'todo') === currentTodoMode);
 
                 if (todos.length === 0) {
-                    listEl.innerHTML = '<div class="todo-empty-state">No notes for today. Add one above!</div>';
+                    const label = currentTodoMode === 'todo' ? 'to-dos' : 'notes';
+                    listEl.innerHTML = `<div class="todo-empty-state">No ${label} yet. Add one above!</div>`;
                     return;
                 }
 
                 todos.sort((a, b) => new Date(a.dateCreated) - new Date(b.dateCreated));
 
-                listEl.innerHTML = todos.map(todo => `
-                    <li class="todo-item ${todo.completed ? 'completed' : ''}" data-id="${todo.id}">
-                        <div class="todo-content">
-                            <input type="checkbox" class="todo-checkbox" ${todo.completed ? 'checked' : ''} onchange="handleToggleTodo(${todo.id}, this.checked)">
-                            <span class="todo-text">${escapeHtml(todo.text)}</span>
-                        </div>
-                        <button class="todo-delete-btn" onclick="handleDeleteTodo(${todo.id})" title="Delete">&#10005;</button>
-                    </li>
-                `).join('');
+                listEl.innerHTML = todos.map(todo => {
+                    const itemType = todo.type || 'todo'; // backward compat: default to todo
+                    const isCompleted = todo.completed;
+
+                    if (itemType === 'note') {
+                        // Notes mode: bullet point, no checkbox
+                        return `
+                            <li class="todo-item note-item" data-id="${todo.id}">
+                                <div class="todo-content">
+                                    <span class="note-bullet">•</span>
+                                    <span class="todo-text">${escapeHtml(todo.text)}</span>
+                                </div>
+                                <div class="todo-actions">
+                                    <button class="todo-edit-btn" onclick="handleEditTodo(${todo.id})" title="Edit">✏️</button>
+                                    <button class="todo-delete-btn" onclick="handleDeleteTodo(${todo.id})" title="Delete">&#10005;</button>
+                                </div>
+                            </li>`;
+                    } else {
+                        // To-Do mode: checkbox
+                        return `
+                            <li class="todo-item ${isCompleted ? 'completed' : ''}" data-id="${todo.id}">
+                                <div class="todo-content">
+                                    <input type="checkbox" class="todo-checkbox" ${isCompleted ? 'checked' : ''} onchange="handleToggleTodo(${todo.id}, this.checked)">
+                                    <span class="todo-text">${escapeHtml(todo.text)}</span>
+                                </div>
+                                <div class="todo-actions">
+                                    <button class="todo-edit-btn" onclick="handleEditTodo(${todo.id})" title="Edit">✏️</button>
+                                    <button class="todo-delete-btn" onclick="handleDeleteTodo(${todo.id})" title="Delete">&#10005;</button>
+                                </div>
+                            </li>`;
+                    }
+                }).join('');
 
             } catch (e) {
                 console.error("Error rendering todos:", e);
@@ -839,9 +894,8 @@
 
             try {
                 input.value = '';
-                await saveTodoToDB(text, currentTodoDate);
+                await saveTodoToDB(text, currentTodoDate, currentTodoMode);
                 await renderTodoList();
-                // Refresh calendar to show the dot marker if this was the first task
                 if (typeof loadCalendar === 'function') loadCalendar();
             } catch (e) {
                 console.error("Error adding todo:", e);
@@ -857,11 +911,57 @@
             }
         };
 
+        window.handleEditTodo = async function (id) {
+            // Find the list item
+            const li = document.querySelector(`.todo-item[data-id="${id}"]`);
+            if (!li) return;
+
+            const textSpan = li.querySelector('.todo-text');
+            const currentText = textSpan.textContent;
+            const contentDiv = li.querySelector('.todo-content');
+            const actionsDiv = li.querySelector('.todo-actions');
+
+            // Replace text with input
+            const editInput = document.createElement('input');
+            editInput.type = 'text';
+            editInput.value = currentText;
+            editInput.className = 'todo-edit-input';
+            editInput.style.cssText = 'flex:1; padding:4px 8px; border:1px solid #9b59b6; border-radius:6px; font-size:12px; background:rgba(255,255,255,0.8); color:inherit; outline:none;';
+
+            textSpan.replaceWith(editInput);
+            editInput.focus();
+            editInput.select();
+
+            // Replace action buttons with save/cancel
+            actionsDiv.innerHTML = `
+                <button class="todo-save-btn" title="Save" style="background:none;border:none;cursor:pointer;font-size:13px;padding:2px 3px;">✅</button>
+                <button class="todo-cancel-btn" title="Cancel" style="background:none;border:none;cursor:pointer;font-size:13px;padding:2px 3px;">❌</button>
+            `;
+
+            const saveEdit = async () => {
+                const newText = editInput.value.trim();
+                if (newText && newText !== currentText) {
+                    try {
+                        await updateTodoTextInDB(id, newText);
+                        await renderTodoList();
+                    } catch (e) {
+                        console.error("Error editing todo:", e);
+                    }
+                } else {
+                    await renderTodoList(); // re-render to cancel
+                }
+            };
+
+            actionsDiv.querySelector('.todo-save-btn').addEventListener('click', saveEdit);
+            actionsDiv.querySelector('.todo-cancel-btn').addEventListener('click', () => renderTodoList());
+            editInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') saveEdit(); });
+            editInput.addEventListener('keydown', (e) => { if (e.key === 'Escape') renderTodoList(); });
+        };
+
         window.handleDeleteTodo = async function (id) {
             try {
                 await removeTodoFromDB(id);
                 await renderTodoList();
-                // Refresh calendar to potentially remove the dot marker
                 if (typeof loadCalendar === 'function') loadCalendar();
             } catch (e) {
                 console.error("Error deleting todo:", e);
@@ -1330,6 +1430,7 @@
                 }
             }
             loadCalendar();
+            initTodos(); // Initialize daily notes panel
 
             // 3. Custom Exam Builder logic
             let availBkqs = [];
@@ -1529,6 +1630,23 @@
             </div>
         </div>
     </div>
+    <!-- Floating Action Bar for Multi-Select -->
+    <div class="lib-fab" id="multiSelectFab" style="display: none;">
+        <div class="fab-info">
+            <span id="fabSelectedCount">0 exams selected</span>
+        </div>
+        <div class="fab-controls">
+            <label for="fabTotalQuestions" style="font-size: 14px; font-weight: bold; margin-right: 8px;">Total
+                Questions:</label>
+            <input type="number" id="fabTotalQuestions" min="1" max="200" value="30" class="fab-input">
+            <small id="fabAvailableCount"
+                style="margin-left: 8px; color: var(--text-secondary); font-size: 12px; display: none;">(Max:
+                0)</small>
+        </div>
+        <button class="fab-generate-btn" id="fabGenerateBtn" onclick="generateCustomExam()">Generate & Start
+            ▶</button>
+    </div>
+
     <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
         &#8679;

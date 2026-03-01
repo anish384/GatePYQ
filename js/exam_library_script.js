@@ -12,6 +12,9 @@
     let isMultiSelectMode = false;
     let selectedExams = new Map();
 
+    // Detect if we're embedded in index.html (has examSection)
+    const isEmbedded = !!document.getElementById('examSection');
+
     // ====== DOM Refs ======
     const contentEl = document.getElementById('libContent');
     const searchInput = document.getElementById('libSearch');
@@ -299,7 +302,7 @@
 
         if (fabGenerateBtn) {
             fabGenerateBtn.disabled = true;
-            fabGenerateBtn.textContent = 'Generating... ⌛';
+            fabGenerateBtn.textContent = 'Generating... \u231B';
         }
 
         try {
@@ -314,16 +317,22 @@
             if (rawExamsData.length === 0) throw new Error("Could not load any data from selected exams.");
 
             const customExam = generateMixedExamData(rawExamsData, totalRequested);
-            sessionStorage.setItem('retryExamData', JSON.stringify(customExam));
-            sessionStorage.setItem('triggerAutoStart', 'true');
-            window.location.href = 'index.html';
+
+            if (isEmbedded) {
+                // Start directly on the same page
+                startExamDirectly(customExam);
+            } else {
+                sessionStorage.setItem('retryExamData', JSON.stringify(customExam));
+                sessionStorage.setItem('triggerAutoStart', 'true');
+                window.location.href = 'index.html';
+            }
 
         } catch (error) {
             console.error(error);
-            alert('❌ Error generating custom exam: ' + error.message);
+            alert('\u274C Error generating custom exam: ' + error.message);
             if (fabGenerateBtn) {
                 fabGenerateBtn.disabled = false;
-                fabGenerateBtn.textContent = 'Generate & Start ▶';
+                fabGenerateBtn.textContent = 'Generate & Start \u25B6';
             }
         }
     };
@@ -421,6 +430,25 @@
         };
     }
 
+    // ====== Helper: Start exam directly (embedded mode) ======
+    function startExamDirectly(data) {
+        try {
+            window.examData = data;
+            examData = data;
+            if (typeof shuffleExamData === 'function') shuffleExamData();
+            if (typeof initializeQuestionStates === 'function') initializeQuestionStates();
+
+            if (window.enterFullScreen) window.enterFullScreen();
+            if (typeof toggleHomeView === 'function') toggleHomeView(false);
+            document.getElementById('examSection').style.display = 'flex';
+
+            if (typeof startExam === 'function') startExam();
+        } catch (e) {
+            console.error('Error starting exam directly:', e);
+            alert('\u274C Error starting exam: ' + e.message);
+        }
+    }
+
     // ====== Launch Exam ======
     window.launchExam = function (el) {
         const jsonFile = el.dataset.file;
@@ -433,22 +461,26 @@
 
         if (isFileMode) {
             const jsFile = safePath.replace(/\.json$/, '_load.js');
-            window.__examLoadCallback = function (examData) {
+            window.__examLoadCallback = function (examLoadedData) {
                 delete window.__examLoadCallback;
-                try {
-                    sessionStorage.setItem('retryExamData', JSON.stringify(examData));
-                    sessionStorage.setItem('triggerAutoStart', 'true');
-                    window.location.href = 'index.html';
-                } catch (e) {
-                    alert('❌ Storage Error: ' + e.message);
-                    if (btn) { btn.textContent = 'Start ▶'; btn.disabled = false; }
+                if (isEmbedded) {
+                    startExamDirectly(examLoadedData);
+                } else {
+                    try {
+                        sessionStorage.setItem('retryExamData', JSON.stringify(examLoadedData));
+                        sessionStorage.setItem('triggerAutoStart', 'true');
+                        window.location.href = 'index.html';
+                    } catch (e) {
+                        alert('\u274C Storage Error: ' + e.message);
+                        if (btn) { btn.textContent = 'Start \u25B6'; btn.disabled = false; }
+                    }
                 }
             };
             const script = document.createElement('script');
             script.src = jsFile;
             script.onerror = function () {
-                alert('❌ Could not load exam file: ' + jsFile);
-                if (btn) { btn.textContent = 'Start ▶'; btn.disabled = false; }
+                alert('\u274C Could not load exam file: ' + jsFile);
+                if (btn) { btn.textContent = 'Start \u25B6'; btn.disabled = false; }
             };
             document.head.appendChild(script);
         } else {
@@ -461,14 +493,18 @@
                     }
                     throw new Error('Failed to fetch ' + safePath);
                 })
-                .then(examData => {
-                    sessionStorage.setItem('retryExamData', JSON.stringify(examData));
-                    sessionStorage.setItem('triggerAutoStart', 'true');
-                    window.location.href = 'index.html';
+                .then(examLoadedData => {
+                    if (isEmbedded) {
+                        startExamDirectly(examLoadedData);
+                    } else {
+                        sessionStorage.setItem('retryExamData', JSON.stringify(examLoadedData));
+                        sessionStorage.setItem('triggerAutoStart', 'true');
+                        window.location.href = 'index.html';
+                    }
                 })
                 .catch(e => {
-                    alert('❌ Error loading exam: ' + e.message);
-                    if (btn) { btn.textContent = 'Start ▶'; btn.disabled = false; }
+                    alert('\u274C Error loading exam: ' + e.message);
+                    if (btn) { btn.textContent = 'Start \u25B6'; btn.disabled = false; }
                 });
         }
     };
